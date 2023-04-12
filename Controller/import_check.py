@@ -7,7 +7,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(
 sys.path.append(PROJECT_ROOT)
 
 from simple_pid import PID
-
+from jax import RealTimePlotApplet
 
 
 PID_Generator = PID()
