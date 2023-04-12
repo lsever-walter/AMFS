@@ -250,3 +250,6 @@ class PID(object):
         self._last_time = self.time_fn()
         self._last_output = None
         self._last_input = None
+
+    def test(self):
+        print("hello!")
