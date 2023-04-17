@@ -1,56 +1,29 @@
-import os
-import sys
-PROJECT_ROOT = os.path.abspath(os.path.join(
-                  os.path.dirname(__file__), 
-                  os.pardir)
-)
-sys.path.append(PROJECT_ROOT)
+#
+# moku example: Basic Datalogger streaming
+#
+# This example demonstrates use of the Datalogger instrument to
+# stream time-series voltage data and plot it using matplotlib
+#
+# (c) 2022 Liquid Instruments Pty. Ltd.
+#
+import matplotlib.pyplot as plt
 
-from simple_pid import PID
+from moku.instruments import Datalogger
 
+i = Datalogger('[fe80:0000:0000:0000:7269:79ff:feb9:173a%17]', force_connect=True)
 
-from moku.instruments import MultiInstrument
-from moku.instruments import Oscilloscope, Datalogger
-
-
-import time
-import matplotlib as plt
-
-
-m = MultiInstrument('192.168.###.###', platform_id=2)
 try:
-    dl = m.set_instrument(1, Datalogger)
-    osc = m.set_instrument(2, Oscilloscope)
+    # generate a waveform on output channel 1
+    i.generate_waveform(1, "Sine", frequency=100)
 
-    connections = [dict(source="Input1", destination="Slot1InA"),
-               dict(source="Slot2OutA", destination="Output1")]
-    
-    
-    m.set_connections(connections=connections)
+    # disable Input2 as we want to stream data only from Input1
+    i.disable_channel(2)
 
-    print(m.set_connections(connections=connections))
-except Exception as e:
-    raise e
+    # set the sample rate to 10KSa/s
+    i.set_samplerate(10e3)
 
-dl = m.set_instrument(1, Datalogger)
-osc = m.set_instrument(2, Oscilloscope)
-
-
-'''Take Data and Generate PID signal'''
-
-PID_Generator = PID()
-try:
-
-    #only want stream from channel 1
-
-    dl.disable_channel(2)
-
-    # set the sample rate to 100KSa/s
-    dl.set_samplerate(10e5)
-
-    # stream the data for 10 seconds.. 
-    #should replace this with a loop
-    dl.start_streaming(10)
+    # stream the data for 10 seconds..
+    i.start_streaming(10)
 
     # Set up the plotting parameters
     plt.ion()
@@ -66,18 +39,16 @@ try:
     # This loops continuously updates the plot with new data
     while True:
         # get the chunk of streamed data
-        data = dl.get_stream_data()
-        signal = PID_Generator.__call__(data['time'][-1])
-        osc.set_power_supply(1,enable=True,voltage=2, current=0.1)
+        data = i.get_stream_data()
         if data:
             plt.xlim([data['time'][0], data['time'][-1]])
             # Update the plot
             line1.set_ydata(data['ch1'])
             line1.set_xdata(data['time'])
-            plt.pause(0.0001)
+            plt.pause(0.001)
 
 except Exception as e:
-    dl.stop_streaming()
+    i.stop_streaming()
     print(e)
 finally:
-    m.relinquish_ownership()
+    i.relinquish_ownership()
