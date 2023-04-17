@@ -2,8 +2,17 @@ import matplotlib.pyplot as plt
 
 from moku.instruments import MultiInstrument
 from moku.instruments import Oscilloscope, WaveformGenerator
+import time 
 
-m = MultiInstrument('[fe80:0000:0000:0000:7269:79ff:feb9:3e1e%19]', platform_id=2, force_connect=True)
+import os
+import sys
+PROJECT_ROOT = os.path.abspath(os.path.join(
+                  os.path.dirname(__file__), 
+                  os.pardir)
+)
+sys.path.append(PROJECT_ROOT)
+
+m = MultiInstrument('[fe80:0000:0000:0000:7269:79ff:feb9:173a%20]', platform_id=2, force_connect=True)
 try:
     wg = m.set_instrument(1, WaveformGenerator)
     osc = m.set_instrument(2, Oscilloscope)
@@ -33,7 +42,8 @@ try:
     ax = plt.gca()
 
     # This loops continuously updates the plot with new data
-    while True:
+    start = time.time()
+    while time.time()-start < 10:
         # Get new data
         data = osc.get_data()
 
@@ -43,6 +53,8 @@ try:
         line1.set_xdata(data['time'])
         line2.set_xdata(data['time'])
         plt.pause(0.001)
+
+    plt.savefig("Controller/Data/test_fig2.png")
 
 except Exception as e:
     raise e
