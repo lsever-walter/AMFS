@@ -1,7 +1,7 @@
-import matplotlib as plt
-
 from moku.instruments import MultiInstrument
-from moku.instruments import Datalogger, Oscilloscope
+from moku.instruments import Datalogger, Oscilloscope, PIDController
+import matplotlib.ticker as tck
+import matplotlib as plt
 
 
 class Moku_Go:
@@ -9,7 +9,7 @@ class Moku_Go:
         self.moku = MultiInstrument(moku_ip, platform_id=2,
                                     force_connect=True)
         try:
-            self.dl = self.moku.set_instrument(1, Datalogger)
+            self.pid = self.moku.set_instrument(1, PIDController)
             self.osc = self.moku.set_instrument(2, Oscilloscope)
 
             #print(self.moku.set_connections(connections=connections))
@@ -29,6 +29,23 @@ class Moku_Go:
             print(self.moku.get_power_supply(unit))
         except Exception as e:
             print(f"Failed to enable the power supply instrument: {e}")
+
+
+    def real_time_plotting(self): # needs to be tuned!!!
+        fig, ax = plt.subplots()
+        line1, = ax.plot([], [], label='ch1')
+        line2, = ax.plot([], [], label='ch2')
+
+        data = self.pid.get_data()  # Initial Frame
+        x_min, x_max = data['time'][0], data['time'][-1]  # Assuming the axis is not changing
+        ax.set_xlim(x_min, x_max)
+        ax.tick_params(axis='both', which='both', direction='in',
+                          top=True, right=True)
+        ax.xaxis.set_minor_locator(tck.AutoMinorLocator())
+        ax.yaxis.set_minor_locator(tck.AutoMinorLocator())
+
+        #while True:
+           # data = to be continued
 
     def moku_close(self):
         """ Close the connection to the Moku device, this ensurs network
