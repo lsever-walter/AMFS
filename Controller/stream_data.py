@@ -23,7 +23,9 @@ try:
     i.set_samplerate(10e3)
 
     # stream the data for 10 seconds..
-    i.start_streaming(10)
+    response = i.start_streaming()
+    print(response)
+    
 
     # Set up the plotting parameters
     plt.ion()

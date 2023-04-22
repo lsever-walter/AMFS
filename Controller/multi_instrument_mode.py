@@ -12,7 +12,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(
 )
 sys.path.append(PROJECT_ROOT)
 
-m = MultiInstrument('[fe80:0000:0000:0000:7269:79ff:feb9:173a%20]', platform_id=2, force_connect=True)
+m = MultiInstrument('[fe80:0000:0000:0000:7269:79ff:feb9:173a%17]', platform_id=2, force_connect=True)
 try:
     wg = m.set_instrument(1, WaveformGenerator)
     osc = m.set_instrument(2, Oscilloscope)
@@ -54,7 +54,7 @@ try:
         line2.set_xdata(data['time'])
         plt.pause(0.001)
 
-    plt.savefig("Controller/Data/test_fig2.png")
+    plt.savefig("Controller/Data/test_fig4.png")
 
 except Exception as e:
     raise e
