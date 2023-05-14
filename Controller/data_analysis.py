@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.ticker as tck
+from scipy import integrate
 
 # Load the data from the CSV file
 data = np.genfromtxt('/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/no_filter_voltage.csv', delimiter=',')
@@ -21,9 +23,11 @@ def absFFT(times,amplitude):
     return frequencies, abs(fourierTransform)
 
 
-def plotFourrier(t0, v0, t1=0, v1=0):
+def plotFourrier(t0, v0, t1=0, v1=0, log=False):
     freq0, fft0 = absFFT(t0,v0)
     
+    area = noise_quantify(t0, v0)
+
     freq0 = freq0[1:]
     fft0 = fft0[1:]
 
@@ -34,17 +38,22 @@ def plotFourrier(t0, v0, t1=0, v1=0):
     ax.set_xlim((min(freq0), 500))
     ax.set_ylim((min(fft0)-.00005, .00005+max(fft0)))
 
-    ax.xaxis.set_major_locator(plt.MaxNLocator(5))
-    ax.xaxis.set_minor_locator(plt.MaxNLocator(25))
-    #ax.xaxis.set_minor_locator(plt.FixedLocator(np.arange(ax.get_xlim()[0], ax.get_xlim()[1], 100)))
+    ax.legend(loc='upper left', fontsize=16)
+    ax.tick_params(axis='both', which='both', direction='in',
+                        top=True, right=True, labelsize=16)
+    ax.xaxis.set_minor_locator(tck.AutoMinorLocator())
+    ax.yaxis.set_minor_locator(tck.AutoMinorLocator())
+    ax.xaxis.label.set_size(20)
+    ax.yaxis.label.set_size(20)
 
-    # Add major and minor ticks to y-axis
-    ax.yaxis.set_major_locator(plt.MaxNLocator(4))
-    ax.yaxis.set_minor_locator(plt.MaxNLocator(24))
-    ax.yaxis.set_minor_locator(plt.FixedLocator(np.arange(ax.get_ylim()[0], ax.get_ylim()[1], .00005)))
+    if log:
+        ax.set_xscale('log')
+        ax.set_yscale('log')
+        ax.set(xlabel='Log(Frequency)')
+        ax.set(ylabel='Log(Power)', ylim=(5e-9, 1))
 
-
-    ax.tick_params(direction='in', top=True, right=True, which='both')
+    elif not log:
+        pass
 
     #write code that adds major and minor ticks that are oriented inwards on all axes and that sets x and y limits adjusted for the maximum and minimum values for the y and x data
     #plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/active_filter_voltage_7", dpi=300, transparent=False)
@@ -60,17 +69,14 @@ def plot_data(t0, v0, t1=0, v1=0):
     ax.set_xlim((-.25+min(t0), .25+max(t0)))
     ax.set_ylim((min(v0)-.005, .005+max(v0)))
 
-    ax.xaxis.set_major_locator(plt.MaxNLocator(5))
-    ax.xaxis.set_minor_locator(plt.MaxNLocator(25))
-    #ax.xaxis.set_minor_locator(plt.FixedLocator(np.arange(ax.get_xlim()[0], ax.get_xlim()[1], .25)))
-
-    # Add major and minor ticks to y-axis
-    ax.yaxis.set_major_locator(plt.MaxNLocator(3))
-    ax.yaxis.set_minor_locator(plt.MaxNLocator(15))
-    #ax.yaxis.set_minor_locator(plt.FixedLocator(np.arange(ax.get_xlim()[0], ax.get_xlim()[1], .25)))
-
-    ax.tick_params(direction='in', top=True, right=True, which='both')
-
+    ax.legend(loc='upper left', fontsize=16)
+    ax.tick_params(axis='both', which='both', direction='in',
+                        top=True, right=True, labelsize=16)
+    ax.xaxis.set_minor_locator(tck.AutoMinorLocator())
+    ax.yaxis.set_minor_locator(tck.AutoMinorLocator())
+    ax.xaxis.label.set_size(20)
+    ax.yaxis.label.set_size(20)
+    
     # plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/active_filter_voltage_7", dpi=300, transparent=False)
     plt.show()
 
@@ -83,25 +89,17 @@ def drift_quantify(v0):
     return v_std, v_rms
 
 
-def find_max(t0, v0):
+def noise_quantify(t0, v0):
     freq0, fft0 = absFFT(t0,v0)
-    freq0 = freq0[10:]
-    fft0 = fft0[10:]
-    sorted_indices = np.argsort(fft0)[-3:]
-    sorted_values = fft0[sorted_indices]
-    print(f"The max amplitudes are {sorted_values}")
-    print(f"The values at which they occur at: {sorted_values}")
-
-
-    return sorted_indices, sorted_values
-
+    area_simpson = integrate.simpson(y=fft0, x=freq0)
+    return area_simpson,
 
 
 
 plot_data(t0, v0)
-plotFourrier(t0, v0)
+plotFourrier(t0, v0, log=True)
 # std, rms = drift_quantify(v0)
-find_max(t0,v0)
+noise_quantify(t0, v0)
 
 
 
