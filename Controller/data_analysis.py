@@ -36,9 +36,11 @@ def drift_quantify(v0):
     return v_std, v_rms
 
 
-def integrator(t0, v0):
-    freq0, fft0 = absFFT(t0,v0)
-    area_simpson = integrate.simpson(y=fft0, x=freq0)
+def integrator(t, v):
+    freq, fft = absFFT(t,v)
+    # freq = freq[0:1000]
+    # fft= fft[0:1000]
+    area_simpson = integrate.simps(y=fft, x=freq)
     return round(area_simpson, 6)
 
 def plot_data(t, v):
@@ -57,7 +59,7 @@ def plot_data(t, v):
     ax.xaxis.label.set_size(20)
     ax.yaxis.label.set_size(20)
     
-    #plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/Raw/no_filter_raw", dpi=300, transparent=False)
+    plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/Raw/active_filter_8_raw", dpi=300, transparent=False)
     plt.show()
 
 
@@ -92,10 +94,10 @@ def plotFourrier(t, v, log=False):
         
         
         
-        #plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/FFT_LL/no_filter_fft_ll", dpi=300, transparent=False)
+        plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/FFT_LL/active_filter_8_fft_ll", dpi=300, transparent=False)
 
     elif not log:
-        #plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/FFT/no_filter_fft", dpi=300, transparent=False)
+        plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/FFT/active_filter_8_fft", dpi=300, transparent=False)
         pass
     
     
@@ -146,9 +148,9 @@ def overplot_fourrier(t0, v0, t1, v1, log=False):
 
 
 
-plot_data(t0, v0)
+plot_data(t1, v1)
 plotFourrier(t1, v1, log=False)
-# plotFourrier(t0, v0, log=False)
+plotFourrier(t1, v1, log=True)
 overplot_fourrier(t0, v0, t1, v1, log=True)
 
 
