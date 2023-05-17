@@ -13,7 +13,7 @@ from moku.instruments import Datalogger
 
 # Connect to your Moku by its ip address using Datalogger('192.168.###.###')
 # or by its serial number using Datalogger(serial=123)
-i = Datalogger(serial=1486, force_connect=True)
+i = Datalogger('[fe80:0000:0000:0000:7269:79ff:feb9:173a%21]', force_connect=True)
 
 try:
     # Configure the frontend
@@ -52,3 +52,4 @@ finally:
     # Close the connection to the Moku device
     # This ensures network resources and released correctly
     i.relinquish_ownership()
+

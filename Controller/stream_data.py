@@ -6,25 +6,31 @@
 #
 # (c) 2022 Liquid Instruments Pty. Ltd.
 #
+import pandas as pd
 import matplotlib.pyplot as plt
 
 from moku.instruments import Datalogger
 
-i = Datalogger('[fe80:0000:0000:0000:7269:79ff:feb9:173a%17]', force_connect=True)
+i = Datalogger(serial=3975, force_connect=True)
 
 try:
     # generate a waveform on output channel 1
-    i.generate_waveform(1, "Sine", frequency=100)
+    i.generate_waveform(1, "Sine", frequency=60)
 
     # disable Input2 as we want to stream data only from Input1
     i.disable_channel(2)
 
     # set the sample rate to 10KSa/s
-    i.set_samplerate(10e3)
+    i.set_samplerate(1e5)
 
     # stream the data for 10 seconds..
-    response = i.start_streaming()
-    print(response)
+    
+    i.start_streaming(1)
+    
+    #stream data to a specific file
+    i.stream_to_file("/Users/lseverwalter/code/AMFS/Controller/Phase_Data/CSV/streamed_data.csv")
+ 
+    
     
 
     # Set up the plotting parameters
@@ -47,10 +53,15 @@ try:
             # Update the plot
             line1.set_ydata(data['ch1'])
             line1.set_xdata(data['time'])
-            plt.pause(0.001)
+            plt.pause(0.01)
+
+        
 
 except Exception as e:
     i.stop_streaming()
     print(e)
 finally:
     i.relinquish_ownership()
+
+
+
