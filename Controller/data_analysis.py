@@ -4,8 +4,8 @@ import matplotlib.ticker as tck
 from scipy import integrate
 
 # Load the data from the CSV file
-data0 = np.genfromtxt('/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/CSV/no_filter_voltage.csv', delimiter=',')
-data1 = np.genfromtxt('/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/CSV/active_filter_voltage_8.csv', delimiter=',')
+data0 = np.genfromtxt('/Users/lseverwalter/code/AMFS/Controller/Noise_Data/Active_Filter/CSV/no_filter_voltage.csv', delimiter=',')
+data1 = np.genfromtxt('/Users/lseverwalter/code/AMFS/Controller/Noise_Data/Active_Filter/CSV/active_filter_voltage_8.csv', delimiter=',')
 # Split the columns into separate numpy arrays
 
 t0 = np.array(data0[:, 0])
@@ -59,7 +59,7 @@ def plot_data(t, v):
     ax.xaxis.label.set_size(20)
     ax.yaxis.label.set_size(20)
     
-    plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/Raw/active_filter_8_raw", dpi=300, transparent=False)
+    #plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/Raw/active_filter_8_raw", dpi=300, transparent=False)
     plt.show()
 
 
@@ -94,10 +94,10 @@ def plotFourrier(t, v, log=False):
         
         
         
-        plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/FFT_LL/active_filter_8_fft_ll", dpi=300, transparent=False)
+        plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Noise_Data/Active_Filter/FFT_LL/active_filter_8_fft_ll", dpi=300, transparent=False)
 
     elif not log:
-        plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/FFT/active_filter_8_fft", dpi=300, transparent=False)
+        plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Noise_Data/Active_Filter/FFT/active_filter_8_fft", dpi=300, transparent=False)
         pass
     
     
@@ -116,6 +116,9 @@ def overplot_fourrier(t0, v0, t1, v1, log=False):
     
     freq1 = freq1[2:]
     fft1 = fft1[2:]
+    if log:
+        fft0 = 20 * np.log10(fft0)
+        fft1 = 20 * np.log10(fft1)
 
     fig, ax = plt.subplots(1, 1, num=2)
     ax.plot(freq0, fft0, label=f"No Filter (A={area0})")
@@ -135,14 +138,14 @@ def overplot_fourrier(t0, v0, t1, v1, log=False):
 
     if log:
         ax.set_xscale('log')
-        ax.set_yscale('log')
-        ax.set(xlabel='Log(Frequency)', xlim=None)
-        ax.set(ylabel='Log(Power)', ylim=(5e-9, 1))
+        #ax.set_yscale('log')
+        ax.set(xlabel='frequency [Hz]', xlim=None)
+        ax.set(ylabel='Power (dB)', ylim=(-180, -40))
         
     elif not log:
         pass
    
-    plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Data/Active_Filter/FFT_Overplot/no_filter_filter_8", dpi=300, transparent=False)
+    plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Noise_Data/Active_Filter/FFT_Overplot/no_filter_filter_8", dpi=300, transparent=False)
     plt.show()
 
 
