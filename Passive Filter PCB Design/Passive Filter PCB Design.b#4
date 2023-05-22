@@ -156,14 +156,15 @@
 </layers>
 <board>
 <plain>
-<wire x1="0.08719375" y1="-0.174559375" x2="40.27775625" y2="0.206534375" width="0" layer="20"/>
-<wire x1="40.27775625" y1="0.206534375" x2="39.843171875" y2="64.240284375" width="0" layer="20"/>
-<wire x1="39.843171875" y1="64.240284375" x2="-0.347390625" y2="63.859190625" width="0" layer="20"/>
-<wire x1="-0.347390625" y1="63.859190625" x2="0.08719375" y2="-0.174559375" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="39.580209375" y2="0.206534375" width="0" layer="20"/>
+<wire x1="39.580209375" y1="0.206534375" x2="39.581590625" y2="62.145575" width="0" layer="20"/>
+<wire x1="39.581590625" y1="62.145575" x2="0.00138125" y2="61.939040625" width="0" layer="20"/>
+<wire x1="0.00138125" y1="61.939040625" x2="0" y2="0" width="0" layer="20"/>
 <text x="1.4083" y="4.705578125" size="1.016" layer="1">V+ OpAmp</text>
 <text x="21.650190625" y="53.014403125" size="0.6096" layer="1" rot="R180">COILS</text>
-<hole x="22.304603125" y="4.67756875" drill="0.9"/>
-<hole x="32.44980625" y="4.67015" drill="0.9"/>
+<hole x="22.36905625" y="4.677571875" drill="0.9"/>
+<hole x="32.54648125" y="4.605753125" drill="0.9"/>
+<text x="37.840490625" y="57.3891625" size="0.6096" layer="1" rot="R180">MOKU +</text>
 </plain>
 <libraries>
 <library name="Resistor">
@@ -688,37 +689,37 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="R1" library="Resistor" package="RESAD724W46L381D178B" package3d_urn="urn:adsk.eagle:package:16378561/2" value="" x="9.448315625" y="48.8214" smashed="yes">
-<attribute name="CATEGORY" value="Resistor" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="9.448315625" y="50.4714" size="1.27" layer="25" align="bottom-center"/>
-<attribute name="OPERATING_TEMP" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="PART_STATUS" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="RATING" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="ROHS_COMPLIANT" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="SERIES" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="SUB-CATEGORY" value="Fixed" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="THERMALLOSS" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="TYPE" value="" x="43.738315625" y="5.6414" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="9.448315625" y="47.1714" size="1.27" layer="27" align="top-center"/>
+<element name="R1" library="Resistor" package="RESAD724W46L381D178B" package3d_urn="urn:adsk.eagle:package:16378561/2" value="" x="9.448315625" y="50.134325" smashed="yes">
+<attribute name="CATEGORY" value="Resistor" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="9.448315625" y="51.784325" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="OPERATING_TEMP" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="PART_STATUS" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="RATING" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="ROHS_COMPLIANT" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="SERIES" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="SUB-CATEGORY" value="Fixed" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="THERMALLOSS" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="TYPE" value="" x="43.738315625" y="6.954325" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="9.448315625" y="48.484325" size="1.27" layer="27" align="top-center"/>
 </element>
-<element name="R2" library="Resistor" package="RESAD724W46L381D178B" package3d_urn="urn:adsk.eagle:package:16378561/2" value="" x="9.364275" y="53.8366875" smashed="yes">
-<attribute name="CATEGORY" value="Resistor" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="9.364275" y="55.4866875" size="1.27" layer="25" align="bottom-center"/>
-<attribute name="OPERATING_TEMP" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="PART_STATUS" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="RATING" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="ROHS_COMPLIANT" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="SERIES" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="SUB-CATEGORY" value="Fixed" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="THERMALLOSS" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="TYPE" value="" x="52.544275" y="10.6566875" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="9.364275" y="52.1866875" size="1.27" layer="27" align="top-center"/>
+<element name="R2" library="Resistor" package="RESAD724W46L381D178B" package3d_urn="urn:adsk.eagle:package:16378561/2" value="" x="9.457984375" y="54.680709375" smashed="yes">
+<attribute name="CATEGORY" value="Resistor" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="9.457984375" y="56.330709375" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="OPERATING_TEMP" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="PART_STATUS" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="RATING" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="ROHS_COMPLIANT" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="SERIES" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="SUB-CATEGORY" value="Fixed" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="THERMALLOSS" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="TYPE" value="" x="52.637984375" y="11.500709375" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="9.457984375" y="53.030709375" size="1.27" layer="27" align="top-center"/>
 </element>
 <element name="R3" library="Resistor" package="RESAD724W46L381D178B" package3d_urn="urn:adsk.eagle:package:16378561/2" value="" x="29.053509375" y="51.807728125" smashed="yes" rot="R90">
 <attribute name="CATEGORY" value="Resistor" x="72.233509375" y="103.877728125" size="1.778" layer="27" rot="R90" display="off"/>
@@ -736,46 +737,46 @@ design rules under a new name.</description>
 <attribute name="TYPE" value="" x="72.233509375" y="103.877728125" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="30.703509375" y="51.807728125" size="1.27" layer="27" rot="R90" align="top-center"/>
 </element>
-<element name="R4" library="Resistor" package="RESAD724W46L381D178B" package3d_urn="urn:adsk.eagle:package:16378561/2" value="" x="23.85066875" y="34.14439375" smashed="yes" rot="R90">
-<attribute name="CATEGORY" value="Resistor" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MANUFACTURER" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="22.20066875" y="34.14439375" size="1.27" layer="25" rot="R90" align="bottom-center"/>
-<attribute name="OPERATING_TEMP" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PART_STATUS" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="RATING" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="ROHS_COMPLIANT" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SERIES" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SUB-CATEGORY" value="Fixed" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="THERMALLOSS" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TOLERANCE" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TYPE" value="" x="78.46066875" y="51.92439375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="25.50066875" y="34.14439375" size="1.27" layer="27" rot="R90" align="top-center"/>
+<element name="R4" library="Resistor" package="RESAD724W46L381D178B" package3d_urn="urn:adsk.eagle:package:16378561/2" value="" x="29.098403125" y="34.331953125" smashed="yes" rot="R90">
+<attribute name="CATEGORY" value="Resistor" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="27.448403125" y="34.331953125" size="1.27" layer="25" rot="R90" align="bottom-center"/>
+<attribute name="OPERATING_TEMP" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PART_STATUS" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="RATING" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="ROHS_COMPLIANT" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SERIES" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SUB-CATEGORY" value="Fixed" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="THERMALLOSS" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TOLERANCE" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TYPE" value="" x="83.708403125" y="52.111953125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="30.748403125" y="34.331953125" size="1.27" layer="27" rot="R90" align="top-center"/>
 </element>
-<element name="R5" library="Resistor" package="RESAD724W46L381D178B" package3d_urn="urn:adsk.eagle:package:16378561/2" value="" x="19.684475" y="34.6459625" smashed="yes" rot="R270">
-<attribute name="CATEGORY" value="Resistor" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="16.86273125" y="34.6108" size="1.27" layer="25" rot="R270" align="bottom-center"/>
-<attribute name="OPERATING_TEMP" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PART_STATUS" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="RATING" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="ROHS_COMPLIANT" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SERIES" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SUB-CATEGORY" value="Fixed" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="THERMALLOSS" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TOLERANCE" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TYPE" value="" x="-34.925525" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="18.034475" y="34.6459625" size="1.27" layer="27" rot="R270" align="top-center"/>
+<element name="R5" library="Resistor" package="RESAD724W46L381D178B" package3d_urn="urn:adsk.eagle:package:16378561/2" value="" x="24.744790625" y="34.6459625" smashed="yes" rot="R270">
+<attribute name="CATEGORY" value="Resistor" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="21.923046875" y="34.6108" size="1.27" layer="25" rot="R270" align="bottom-center"/>
+<attribute name="OPERATING_TEMP" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PART_STATUS" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="RATING" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="ROHS_COMPLIANT" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SERIES" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SUB-CATEGORY" value="Fixed" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="THERMALLOSS" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TOLERANCE" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TYPE" value="" x="-29.865209375" y="7.9759625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" x="23.094790625" y="34.6459625" size="1.27" layer="27" rot="R270" align="top-center"/>
 </element>
-<element name="SHUNT" library="2N7000" library_urn="urn:adsk.eagle:library:40417905" package="TO92-" package3d_urn="urn:adsk.eagle:package:40417908/1" value="2N7000" x="10.772790625" y="36.983803125" smashed="yes">
-<attribute name="AVAILABILITY" value="In Stock" x="10.772790625" y="36.983803125" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value=" N-Channel 60 V 350mA (Tc) 1W (Tc) Through Hole TO-92-3 " x="10.772790625" y="36.983803125" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="STMicroelectronics" x="10.772790625" y="36.983803125" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="2N7000" x="10.772790625" y="36.983803125" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE" value="E-PKG AXIAL-LEADED-2 ON Semiconductor" x="10.772790625" y="36.983803125" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="10.772790625" y="36.983803125" size="1.778" layer="27" display="off"/>
-<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/2N7000/?ref=eda" x="10.772790625" y="36.983803125" size="1.778" layer="27" display="off"/>
+<element name="SHUNT" library="2N7000" library_urn="urn:adsk.eagle:library:40417905" package="TO92-" package3d_urn="urn:adsk.eagle:package:40417908/1" value="2N7000" x="10.67908125" y="35.014425" smashed="yes">
+<attribute name="AVAILABILITY" value="In Stock" x="10.67908125" y="35.014425" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value=" N-Channel 60 V 350mA (Tc) 1W (Tc) Through Hole TO-92-3 " x="10.67908125" y="35.014425" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="STMicroelectronics" x="10.67908125" y="35.014425" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="2N7000" x="10.67908125" y="35.014425" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="E-PKG AXIAL-LEADED-2 ON Semiconductor" x="10.67908125" y="35.014425" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="None" x="10.67908125" y="35.014425" size="1.778" layer="27" display="off"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/2N7000/?ref=eda" x="10.67908125" y="35.014425" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U1" library="LM358AP" library_urn="urn:adsk.eagle:library:40417956" package="DIP794W45P254L959H508Q8" package3d_urn="urn:adsk.eagle:package:40417959/1" value="LM358AP" x="8.1073" y="20.0096125" smashed="yes" rot="MR270">
 <attribute name="AVAILABILITY" value="In Stock" x="8.1073" y="20.0096125" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -821,20 +822,29 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="3" x="19.340653125" y="44.250859375" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="21.880653125" y="40.948859375" size="1.27" layer="28" ratio="10" rot="MR0"/>
 </element>
-<element name="C1" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" package="C5B3.5" package3d_urn="urn:adsk.eagle:package:5427/1" value="" x="20.803046875" y="23.281490625" smashed="yes" rot="R90">
-<attribute name="NAME" x="18.771046875" y="20.741490625" size="1.27" layer="25" ratio="10" rot="R90"/>
-<attribute name="POPULARITY" value="3" x="20.803046875" y="23.281490625" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="24.105046875" y="20.741490625" size="1.27" layer="27" ratio="10" rot="R90"/>
+<element name="C1" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" package="C5B3.5" package3d_urn="urn:adsk.eagle:package:5427/1" value="" x="14.64245" y="27.477803125" smashed="yes">
+<attribute name="NAME" x="12.10245" y="29.509803125" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="3" x="14.64245" y="27.477803125" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="12.10245" y="24.175803125" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="L2" library="inductor-neosid" library_urn="urn:adsk.eagle:library:241" package="SD75" package3d_urn="urn:adsk.eagle:package:14650/1" value="" x="35.791925" y="52.33415625" smashed="yes" rot="R90">
+<attribute name="MF" value="" x="27.205125" y="44.32455625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="" x="27.205125" y="44.32455625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="33.291925" y="48.58415625" size="1.27" layer="25" rot="R90"/>
+<attribute name="OC_FARNELL" value="unknown" x="27.205125" y="44.32455625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="27.205125" y="44.32455625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="POPULARITY" value="1" x="27.205125" y="44.32455625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="39.541925" y="48.58415625" size="1.27" layer="27" rot="R90"/>
 </element>
 </elements>
 <signals>
 <signal name="N$1">
 <contactref element="R1" pad="1"/>
 <contactref element="SHUNT" pad="3"/>
-<wire x1="8.139009375" y1="36.890021875" x2="8.232790625" y2="36.983803125" width="0.3048" layer="1"/>
-<wire x1="5.828315625" y1="48.8214" x2="5.828315625" y2="39.36716875" width="0.3048" layer="1"/>
-<wire x1="5.828315625" y1="39.36716875" x2="8.621275" y2="36.574209375" width="0.3048" layer="1"/>
-<wire x1="8.621275" y1="36.574209375" x2="8.232790625" y2="36.983803125" width="0" layer="19" extent="1-1"/>
+<wire x1="5.828315625" y1="50.134325" x2="5.828315625" y2="37.323228125" width="0.3048" layer="16"/>
+<wire x1="5.828315625" y1="50.134325" x2="5.828315625" y2="37.0373125" width="0.3048" layer="1"/>
+<wire x1="7.851203125" y1="35.014425" x2="8.13908125" y2="35.014425" width="0.3048" layer="1"/>
+<wire x1="5.828315625" y1="37.0373125" x2="7.851203125" y2="35.014425" width="0.3048" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="R3" pad="1"/>
@@ -848,23 +858,37 @@ design rules under a new name.</description>
 <contactref element="R4" pad="2"/>
 <contactref element="H1" pad="B2,8"/>
 <contactref element="SHUNT" pad="1"/>
-<wire x1="23.85066875" y1="37.76439375" x2="23.89455" y2="37.76439375" width="0.3048" layer="1"/>
-<wire x1="16.6267125" y1="40.366359375" x2="13.312790625" y2="37.0524375" width="0.3048" layer="1"/>
-<wire x1="13.312790625" y1="36.983803125" x2="13.312790625" y2="37.0524375" width="0.3048" layer="1"/>
-<wire x1="21.0393875" y1="40.366359375" x2="16.6267125" y2="40.366359375" width="0.3048" layer="1"/>
-<wire x1="23.85066875" y1="37.76439375" x2="23.84983125" y2="37.76439375" width="0.3048" layer="1"/>
-<wire x1="23.85066875" y1="37.76439375" x2="29.143390625" y2="32.471671875" width="0.3048" layer="1"/>
-<wire x1="29.143390625" y1="32.471671875" x2="29.143390625" y2="25.794240625" width="0.3048" layer="1"/>
-<wire x1="29.143390625" y1="25.794240625" x2="28.862190625" y2="25.513040625" width="0.3048" layer="1"/>
-<wire x1="28.862190625" y1="25.513040625" x2="28.20629375" y2="25.513040625" width="0.3048" layer="1"/>
+<wire x1="27.75116875" y1="37.951953125" x2="29.098403125" y2="37.951953125" width="0.3048" layer="1"/>
+<wire x1="29.098403125" y1="37.951953125" x2="29.142284375" y2="37.951953125" width="0.3048" layer="1"/>
+<wire x1="25.6181" y1="40.085021875" x2="27.75116875" y2="37.951953125" width="0.3048" layer="1"/>
+<wire x1="13.21908125" y1="35.014425" x2="18.306096875" y2="35.014425" width="0.3048" layer="1"/>
+<wire x1="23.37669375" y1="40.085021875" x2="18.306096875" y2="35.014425" width="0.3048" layer="1"/>
+<wire x1="23.37669375" y1="40.085021875" x2="25.6181" y2="40.085021875" width="0.3048" layer="1"/>
+<wire x1="29.098403125" y1="37.951953125" x2="29.097565625" y2="37.951953125" width="0.3048" layer="1"/>
+<wire x1="28.20629375" y1="25.513040625" x2="28.20629375" y2="27.642115625" width="0.3048" layer="1"/>
+<wire x1="29.098403125" y1="37.951953125" x2="29.318684375" y2="37.951953125" width="0.3048" layer="1"/>
+<wire x1="31.835665625" y1="35.434971875" x2="29.318684375" y2="37.951953125" width="0.3048" layer="1"/>
+<wire x1="31.835665625" y1="35.434971875" x2="31.835665625" y2="31.2714875" width="0.3048" layer="1"/>
+<wire x1="31.835665625" y1="31.2714875" x2="28.20629375" y2="27.642115625" width="0.3048" layer="1"/>
+<wire x1="11.9173" y1="23.9796125" x2="17.107925" y2="18.7889875" width="0.3048" layer="1"/>
+<wire x1="17.107925" y1="18.7889875" x2="17.107925" y2="3.97683125" width="0.3048" layer="1"/>
+<wire x1="17.107925" y1="3.97683125" x2="19.013678125" y2="2.071078125" width="0.3048" layer="1"/>
+<wire x1="19.013678125" y1="2.071078125" x2="34.30060625" y2="2.071078125" width="0.3048" layer="1"/>
 <contactref element="J1" pad="2"/>
+<wire x1="28.20629375" y1="25.513040625" x2="28.55530625" y2="25.513040625" width="0.3048" layer="1"/>
+<wire x1="28.55530625" y1="25.513040625" x2="32.8012625" y2="25.513040625" width="0.3048" layer="1"/>
+<wire x1="36.3220625" y1="21.992240625" x2="32.8012625" y2="25.513040625" width="0.3048" layer="1"/>
+<wire x1="34.30060625" y1="2.071078125" x2="36.3220625" y2="4.092534375" width="0.3048" layer="1"/>
+<wire x1="36.3220625" y1="4.092534375" x2="36.3220625" y2="21.992240625" width="0.3048" layer="1"/>
 <contactref element="C3" pad="1"/>
+<wire x1="26.24153125" y1="27.477803125" x2="28.20629375" y2="25.513040625" width="0.3048" layer="1"/>
 <wire x1="28.20629375" y1="25.513040625" x2="28.20629375" y2="25.348784375" width="0.3048" layer="1"/>
 <wire x1="28.20629375" y1="25.348784375" x2="28.20629375" y2="20.33598125" width="0.3048" layer="1"/>
 <wire x1="28.20629375" y1="20.33598125" x2="30.025659375" y2="18.516615625" width="0.3048" layer="1"/>
-<wire x1="30.025659375" y1="18.516615625" x2="30.025659375" y2="10.0344625" width="0.3048" layer="1"/>
-<wire x1="30.025659375" y1="10.0344625" x2="30.025659375" y2="9.812171875" width="0.3048" layer="1"/>
+<wire x1="30.025659375" y1="18.516615625" x2="30.025659375" y2="9.812171875" width="0.3048" layer="1"/>
 <wire x1="30.025659375" y1="9.812171875" x2="29.957053125" y2="9.743565625" width="0.3048" layer="1"/>
+<wire x1="29.053509375" y1="48.187728125" x2="22.267309375" y2="48.249890625" width="0.3048" layer="1"/>
+<wire x1="22.267309375" y1="48.249890625" x2="22.267309375" y2="43.849828125" width="0.3048" layer="1"/>
 <wire x1="22.267309375" y1="43.849828125" x2="21.880653125" y2="44.236484375" width="0.3048" layer="1"/>
 <wire x1="21.880653125" y1="44.236484375" x2="21.880653125" y2="44.250859375" width="0.3048" layer="1"/>
 <wire x1="21.880653125" y1="44.250859375" x2="27.664178125" y2="44.250859375" width="0.3048" layer="1"/>
@@ -872,59 +896,51 @@ design rules under a new name.</description>
 <wire x1="34.7928625" y1="37.122175" x2="34.7928625" y2="31.935353125" width="0.3048" layer="1"/>
 <wire x1="34.7928625" y1="31.935353125" x2="28.20629375" y2="25.348784375" width="0.3048" layer="1"/>
 <contactref element="C1" pad="2"/>
-<wire x1="20.803046875" y1="25.821490625" x2="23.467015625" y2="25.513040625" width="0.3048" layer="1"/>
-<wire x1="28.20629375" y1="25.513040625" x2="23.467015625" y2="25.513040625" width="0.3048" layer="1"/>
-<wire x1="29.053509375" y1="48.187728125" x2="24.536971875" y2="48.187728125" width="0.3048" layer="1"/>
-<wire x1="21.880653125" y1="45.531409375" x2="21.880653125" y2="44.250859375" width="0.3048" layer="1"/>
-<wire x1="24.536971875" y1="48.187728125" x2="21.880653125" y2="45.531409375" width="0.3048" layer="1"/>
-<wire x1="23.85066875" y1="37.76439375" x2="23.641353125" y2="37.76439375" width="0.3048" layer="1"/>
-<wire x1="23.641353125" y1="37.76439375" x2="21.0393875" y2="40.366359375" width="0.3048" layer="1"/>
-<wire x1="17.242553125" y1="18.654359375" x2="17.242553125" y2="9.753121875" width="0.3048" layer="1"/>
-<wire x1="17.242553125" y1="9.753121875" x2="19.962171875" y2="7.033503125" width="0.3048" layer="1"/>
-<wire x1="19.962171875" y1="7.033503125" x2="28.019146875" y2="7.033503125" width="0.3048" layer="1"/>
-<wire x1="28.019146875" y1="7.033503125" x2="30.025659375" y2="9.040015625" width="0.3048" layer="1"/>
-<wire x1="30.025659375" y1="9.040015625" x2="30.025659375" y2="9.812171875" width="0.3048" layer="1"/>
-<wire x1="11.9173" y1="23.9796125" x2="17.242553125" y2="18.654359375" width="0.3048" layer="1"/>
+<wire x1="17.18245" y1="27.477803125" x2="26.59054375" y2="27.477803125" width="0.3048" layer="1"/>
+<wire x1="26.59054375" y1="27.477803125" x2="28.55530625" y2="25.513040625" width="0.3048" layer="1"/>
+<contactref element="L2" pad="1"/>
+<wire x1="29.053509375" y1="48.187728125" x2="34.145496875" y2="48.187728125" width="0.3048" layer="1"/>
+<wire x1="34.145496875" y1="48.187728125" x2="35.791925" y2="49.83415625" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$5">
 <contactref element="R5" pad="1"/>
 <contactref element="SHUNT" pad="2"/>
 <contactref element="U1" pad="1"/>
-<wire x1="10.772790625" y1="36.983803125" x2="10.772790625" y2="35.399784375" width="0.3048" layer="1"/>
-<wire x1="10.772790625" y1="35.399784375" x2="4.42464375" y2="29.0516375" width="0.3048" layer="1"/>
-<wire x1="4.42464375" y1="29.0516375" x2="4.42464375" y2="24.10695625" width="0.3048" layer="1"/>
-<wire x1="4.2973" y1="23.9796125" x2="4.42464375" y2="24.10695625" width="0.3048" layer="1"/>
-<wire x1="10.772790625" y1="36.983803125" x2="10.866290625" y2="36.983803125" width="0.3048" layer="1"/>
-<wire x1="19.684475" y1="37.60978125" x2="19.684475" y2="38.2659625" width="0.3048" layer="1"/>
-<wire x1="19.684475" y1="38.2659625" x2="19.58698125" y2="38.16846875" width="0.3048" layer="1"/>
-<wire x1="19.684475" y1="38.2659625" x2="17.902584375" y2="38.2659625" width="0.3048" layer="1"/>
-<wire x1="14.1501375" y1="34.513515625" x2="17.902584375" y2="38.2659625" width="0.3048" layer="1"/>
-<wire x1="10.772790625" y1="36.983803125" x2="13.243078125" y2="34.513515625" width="0.3048" layer="1"/>
-<wire x1="13.243078125" y1="34.513515625" x2="14.1501375" y2="34.513515625" width="0.3048" layer="1"/>
+<wire x1="10.67908125" y1="35.014425" x2="10.38743125" y2="35.014425" width="0.3048" layer="1"/>
+<wire x1="10.38743125" y1="35.014425" x2="5.549159375" y2="30.176153125" width="0.3048" layer="1"/>
+<wire x1="5.549159375" y1="30.176153125" x2="5.549159375" y2="25.231471875" width="0.3048" layer="1"/>
+<wire x1="4.2973" y1="23.9796125" x2="5.549159375" y2="25.231471875" width="0.3048" layer="1"/>
+<wire x1="10.67908125" y1="35.014425" x2="12.759278125" y2="32.934228125" width="0.3048" layer="1"/>
+<wire x1="19.41305625" y1="32.934228125" x2="24.744790625" y2="38.2659625" width="0.3048" layer="1"/>
+<wire x1="12.759278125" y1="32.934228125" x2="19.41305625" y2="32.934228125" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$7">
 <contactref element="R4" pad="1"/>
 <contactref element="U1" pad="2"/>
-<wire x1="11.6685" y1="28.8108125" x2="6.8373" y2="23.9796125" width="0.3048" layer="1"/>
+<wire x1="7.9596375" y1="27.60093125" x2="7.9596375" y2="25.10195" width="0.3048" layer="1"/>
+<wire x1="6.8373" y1="23.9796125" x2="7.9596375" y2="25.10195" width="0.3048" layer="1"/>
+<wire x1="11.35096875" y1="30.9922625" x2="7.9596375" y2="27.60093125" width="0.3048" layer="1"/>
 <contactref element="R5" pad="2"/>
 <wire x1="6.8373" y1="23.9796125" x2="6.8373" y2="28.33085" width="0.3048" layer="1"/>
-<wire x1="6.8373" y1="28.33085" x2="9.49241875" y2="30.98596875" width="0.3048" layer="1"/>
-<wire x1="19.684475" y1="31.0259625" x2="17.43509375" y2="31.0259625" width="0.3048" layer="1"/>
-<wire x1="17.43509375" y1="31.0259625" x2="17.3951" y2="30.98596875" width="0.3048" layer="1"/>
-<wire x1="17.3951" y1="30.98596875" x2="9.49241875" y2="30.98596875" width="0.3048" layer="1"/>
-<wire x1="23.85066875" y1="30.52439375" x2="22.1370875" y2="28.8108125" width="0.3048" layer="1"/>
-<wire x1="22.1370875" y1="28.8108125" x2="11.6685" y2="28.8108125" width="0.3048" layer="1"/>
+<wire x1="6.8373" y1="28.33085" x2="10.43021875" y2="31.92376875" width="0.3048" layer="1"/>
+<wire x1="10.43021875" y1="31.92376875" x2="23.846984375" y2="31.92376875" width="0.3048" layer="1"/>
+<wire x1="23.846984375" y1="31.92376875" x2="24.744790625" y2="31.0259625" width="0.3048" layer="1"/>
+<wire x1="29.098403125" y1="30.711953125" x2="28.416403125" y2="30.029953125" width="0.3048" layer="1"/>
+<wire x1="14.5704375" y1="30.9922625" x2="11.35096875" y2="30.9922625" width="0.3048" layer="1"/>
+<wire x1="28.416403125" y1="30.029953125" x2="15.532746875" y2="30.029953125" width="0.3048" layer="1"/>
+<wire x1="15.532746875" y1="30.029953125" x2="14.5704375" y2="30.9922625" width="0.3048" layer="1"/>
 </signal>
 <signal name="MOKU-IN">
 <contactref element="U1" pad="3"/>
+<wire x1="11.95418125" y1="27.358328125" x2="10.6052375" y2="27.358328125" width="0.3048" layer="1"/>
 <wire x1="9.3773" y1="23.9796125" x2="9.330925" y2="24.0259875" width="0.3048" layer="1"/>
 <contactref element="J1" pad="1"/>
+<wire x1="9.3773" y1="23.9796125" x2="9.3773" y2="26.130390625" width="0.3048" layer="1"/>
+<wire x1="9.3773" y1="26.130390625" x2="10.6052375" y2="27.358328125" width="0.3048" layer="1"/>
 <contactref element="C1" pad="1"/>
-<wire x1="20.803046875" y1="20.741490625" x2="27.417053125" y2="12.722565625" width="0.3048" layer="1"/>
-<wire x1="27.417053125" y1="12.722565625" x2="27.417053125" y2="9.743565625" width="0.3048" layer="1"/>
-<wire x1="9.3773" y1="23.9796125" x2="11.18719375" y2="25.78950625" width="0.3048" layer="1"/>
-<wire x1="15.75503125" y1="25.78950625" x2="20.803046875" y2="20.741490625" width="0.3048" layer="1"/>
-<wire x1="11.18719375" y1="25.78950625" x2="15.75503125" y2="25.78950625" width="0.3048" layer="1"/>
+<wire x1="12.10245" y1="27.477803125" x2="27.417053125" y2="12.1632" width="0.3048" layer="1"/>
+<wire x1="27.417053125" y1="12.1632" x2="27.417053125" y2="9.743565625" width="0.3048" layer="1"/>
+<wire x1="11.95418125" y1="27.358328125" x2="12.10245" y2="27.477803125" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="V+30V">
 <contactref element="R1" pad="2"/>
@@ -934,26 +950,31 @@ design rules under a new name.</description>
 <wire x1="9.93199375" y1="43.9000875" x2="10.282765625" y2="44.250859375" width="0.3048" layer="1"/>
 <wire x1="10.282765625" y1="44.250859375" x2="16.800653125" y2="44.250859375" width="0.3048" layer="1"/>
 <wire x1="16.800653125" y1="44.250859375" x2="16.800653125" y2="44.391784375" width="0.3048" layer="1"/>
-<wire x1="16.800653125" y1="44.391784375" x2="13.068315625" y2="48.124121875" width="0.3048" layer="1"/>
-<wire x1="13.068315625" y1="48.8214" x2="13.068315625" y2="48.124121875" width="0.3048" layer="1"/>
-<wire x1="13.068315625" y1="48.8214" x2="13.077984375" y2="48.83106875" width="0.3048" layer="1"/>
+<wire x1="16.800653125" y1="44.391784375" x2="13.103478125" y2="48.088959375" width="0.3048" layer="1"/>
+<wire x1="13.103478125" y1="50.0991625" x2="13.103478125" y2="48.088959375" width="0.3048" layer="1"/>
+<wire x1="13.103478125" y1="50.0991625" x2="13.068315625" y2="50.134325" width="0.3048" layer="1"/>
+<wire x1="13.068315625" y1="50.134325" x2="13.077984375" y2="50.14399375" width="0.3048" layer="1"/>
 <wire x1="16.90614375" y1="47.85809375" x2="16.90614375" y2="44.35635" width="0.3048" layer="1"/>
 <wire x1="16.800653125" y1="44.250859375" x2="16.90614375" y2="44.35635" width="0.3048" layer="1"/>
 <wire x1="16.90614375" y1="47.85809375" x2="13.04960625" y2="51.71463125" width="0.3048" layer="1"/>
-<wire x1="12.984275" y1="53.8366875" x2="13.04960625" y2="53.77135625" width="0.3048" layer="1"/>
-<wire x1="13.04960625" y1="53.77135625" x2="13.04960625" y2="51.71463125" width="0.3048" layer="1"/>
+<wire x1="13.077984375" y1="54.680709375" x2="13.04960625" y2="54.65233125" width="0.3048" layer="1"/>
+<wire x1="13.04960625" y1="54.65233125" x2="13.04960625" y2="51.71463125" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="R2" pad="1"/>
 <contactref element="L1" pad="2"/>
+<wire x1="4.954134375" y1="56.356459375" x2="4.954134375" y2="54.680709375" width="0.3048" layer="1"/>
+<wire x1="5.837984375" y1="54.680709375" x2="4.954134375" y2="54.680709375" width="0.3048" layer="1"/>
+<wire x1="4.954134375" y1="56.356459375" x2="7.27885625" y2="58.68118125" width="0.3048" layer="1"/>
 <wire x1="17.067121875" y1="55.850571875" x2="14.2365125" y2="58.68118125" width="0.3048" layer="1"/>
-<wire x1="7.9346125" y1="58.68118125" x2="14.2365125" y2="58.68118125" width="0.3048" layer="1"/>
-<wire x1="5.744275" y1="53.8366875" x2="5.744275" y2="56.49084375" width="0.3048" layer="1"/>
-<wire x1="5.744275" y1="56.49084375" x2="7.9346125" y2="58.68118125" width="0.3048" layer="1"/>
+<wire x1="14.2365125" y1="58.68118125" x2="7.27885625" y2="58.68118125" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="R3" pad="2"/>
 <contactref element="L1" pad="1"/>
+<contactref element="L2" pad="2"/>
+<wire x1="29.053509375" y1="55.427728125" x2="35.198353125" y2="55.427728125" width="0.3048" layer="1"/>
+<wire x1="35.198353125" y1="55.427728125" x2="35.791925" y2="54.83415625" width="0.3048" layer="1"/>
 <wire x1="22.067121875" y1="55.850571875" x2="28.630665625" y2="55.850571875" width="0.3048" layer="1"/>
 <wire x1="28.630665625" y1="55.850571875" x2="29.053509375" y2="55.427728125" width="0.3048" layer="1"/>
 </signal>
