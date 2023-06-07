@@ -43,7 +43,11 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 
 # Components
 
-
+1. MOKU:Go 
+2. MOSFET N Channel
+3. OPAMP LM358AP
+4. Bartington Magnetometer
+5. Oscilloscope DS1064
 
 
 # Schematic
@@ -96,9 +100,15 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 
 # Feedforward Control
 
+Feedforward control consists of modifying the input to the system by modulating the source of the disturbance. In this case, the disturbance is the 60Hz from the powerwall that leaks through the DC power supply, as well as 60Hz that enters the magnetic field from laptops and other devices that run at 60Hz. 
+
+Our feedforward methology relies on finding the phase of the 60Hz sin wave in the magnetometer and shunting current to decrease the amplitude of this singal.
 
 ## Line Triggering
-Discuss 
+
+We AC line triggered from DS1064 Oscilloscope, and produced a TTL (time-to-live) at this frequency and sent this to the Moku:Go. The Moku's AWG produced a sin wave at this frequency. We set the period of this sin wave to be slightly more than 60Hz (~60.05 Hz), so that any error in the TTL's phase did not affect the AWG's produced sin wave.
+
+We then obtained the signal from the magnetometer, and sent this into the MOKU:Go. We then phase shifted the sin wave produced by the Moku to be in phase with the 60Hz wave in the magnetometer reading. We then sent the in phase sin wave from the AWG to the second MOSFET in our circuit to shunt away current at this frequency to attenuate 60Hz in the magnetic field. 
 
 ## 60Hz Harmonic Cancellation
 <div align="center">
