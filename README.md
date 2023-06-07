@@ -11,12 +11,14 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
   - [Moku Go](#Moku-Go)
   - [N Channel MOSFET](#N-Channel-Mosfet)
   - [Helmholtz Coils](#Helmholtz-Coils)
+  - [Magnetometer](#Magnetometer)
 - [Feedback Control](#Feedback-Control)
   - [PID Controller](#PID-Controller-(Moku-Go))
   - [Tuning Controller](#Tuning-Controller)
 - [Feedforward Control](#Feedforward-Control)
   - [Line Triggering](#Line-Triggering)
   - [60Hz Harmonic Cancellation](#60Hz-Harmonic-Cancellation)
+- [Combined Feedback Feedforward Control](#Feedback-and-Feedforward)
 - [Future Work](#Future-Work)
   
 
@@ -49,15 +51,30 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
 
 
 ## Moku Go
+<div align="center">
+<img src="https://github.com/lsever-walter/AMFS/blob/3bf59b4830adf94e066e491f6b5c1523c0db8228/Figures/Moku_Go.png" width="1000">
+</div>
 
 
 
 
 ## N Channel Mosfet
+<div align="center">
+<img src="https://github.com/lsever-walter/AMFS/blob/ad475d0d4a1821c7e7b7b4b00d3e2eecd4d2d88b/Figures/MOSFET_shunt.png" width="1000">
+</div>
+
 
 
 
 ## Helmholtz Coils
+<div align="center">
+<img src="https://github.com/lsever-walter/AMFS/blob/4d71a22e017c13e0bc0db5ba8c13be6a7f2043e5/Figures/helmholtz_coils.png" width="1000">
+</div>
+
+## Magnetometer
+<div align="center">
+<img src="https://github.com/lsever-walter/AMFS/blob/36878cb2ec26542b7947e824e373250a5f17f6a9/Figures/bartington-mag03.png" width="1000">
+</div>
 
 
 
@@ -80,6 +97,8 @@ Discuss
 
 ## 60Hz Harmonic Cancellation
 Show optimized plots!
+
+# Feedback and Feedforward
 
 
 # Future Work
