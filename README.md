@@ -72,7 +72,7 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
 
 ## Magnetometer
 <div align="center">
-<img src="" width="1000">
+<img src="https://github.com/lsever-walter/AMFS/blob/36878cb2ec26542b7947e824e373250a5f17f6a9/Figures/bartington-mag03.png" width="1000">
 </div>
 
 
