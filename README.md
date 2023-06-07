@@ -4,6 +4,7 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
 ## Table of Contents
 - [Motivation](#Motivation)
   - [Zeeman Sublevels and Fine Structure](#Zeeman-Sublevels-and-Fine-Structure)
+  - [Zeeman Effect](#The-Zeeman-Effect)
 - [Components](#Components)
 - [Schematic](#Schematic)
   - [Experimental Setup](#Experimental-Setup)
@@ -26,9 +27,12 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
 
 # Motivation
 
-
-
 ## Zeeman Sublevels and Fine Structure
+<div align="center">
+<img src="https://github.com/lsever-walter/AMFS/blob/ef402b0fd69e2dcd81f24fc7162477f2025e19df/Figures/Sr87%2B_level_diagram.png" width="1000">
+</div>
+
+## The Zeeman Effect
 
 
 
