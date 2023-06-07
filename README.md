@@ -11,6 +11,7 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
   - [Moku Go](#Moku-Go)
   - [N Channel MOSFET](#N-Channel-Mosfet)
   - [Helmholtz Coils](#Helmholtz-Coils)
+  - [Magnetometer](#Magnetometer)
 - [Feedback Control](#Feedback-Control)
   - [PID Controller](#PID-Controller-(Moku-Go))
   - [Tuning Controller](#Tuning-Controller)
@@ -67,6 +68,11 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
 ## Helmholtz Coils
 <div align="center">
 <img src="https://github.com/lsever-walter/AMFS/blob/4d71a22e017c13e0bc0db5ba8c13be6a7f2043e5/Figures/helmholtz_coils.png" width="1000">
+</div>
+
+## Magnetometer
+<div align="center">
+<img src="" width="1000">
 </div>
 
 
