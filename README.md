@@ -18,6 +18,7 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
 - [Feedforward Control](#Feedforward-Control)
   - [Line Triggering](#Line-Triggering)
   - [60Hz Harmonic Cancellation](#60Hz-Harmonic-Cancellation)
+- [Combined Feedback Feedforward Control](#Feedback-and-Feedforward)
 - [Future Work](#Future-Work)
   
 
@@ -96,6 +97,8 @@ Discuss
 
 ## 60Hz Harmonic Cancellation
 Show optimized plots!
+
+# Feedback and Feedforward
 
 
 # Future Work
