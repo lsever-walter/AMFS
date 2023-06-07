@@ -84,7 +84,9 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
 
 
 ## Tuning Controller
-Show optimized plots!
+<div align="center">
+<img src="https://github.com/lsever-walter/AMFS/blob/aeaafa04ac33c4959e7f986978e2067f9bd21d4b/Figures/fb_psd.png" width="1000">
+</div>
 
 
 
@@ -96,9 +98,14 @@ Show optimized plots!
 Discuss 
 
 ## 60Hz Harmonic Cancellation
-Show optimized plots!
+<div align="center">
+<img src="https://github.com/lsever-walter/AMFS/blob/aeaafa04ac33c4959e7f986978e2067f9bd21d4b/Figures/ff_psd%2Binset.png" width="1000">
+</div>
 
 # Feedback and Feedforward
+<div align="center">
+<img src="https://github.com/lsever-walter/AMFS/blob/aeaafa04ac33c4959e7f986978e2067f9bd21d4b/Figures/ff%2Bfb_psd%2Binset.png" width="1000">
+</div>
 
 
 # Future Work
