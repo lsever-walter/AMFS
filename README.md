@@ -55,6 +55,7 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 
 ## Experimental Setup
 
+Our Experimental Setup consists of two coils
 
 
 ## Moku Go
@@ -106,7 +107,9 @@ Our feedforward methology relies on finding the phase of the 60Hz sin wave in th
 
 We AC line triggered from DS1064 Oscilloscope, and produced a TTL (time-to-live) at this frequency and sent this to the Moku:Go. The Moku's AWG produced a sin wave at this frequency. We set the period of this sin wave to be slightly more than 60Hz (~60.05 Hz), so that any error in the TTL's phase did not affect the AWG's produced sin wave.
 
-We then obtained the signal from the magnetometer, and sent this into the MOKU:Go. We then phase shifted the sin wave produced by the Moku to be in phase with the 60Hz wave in the magnetometer reading. We then sent the in phase sin wave from the AWG to the second MOSFET in our circuit to shunt away current at this frequency to attenuate 60Hz in the magnetic field. 
+We then obtained the signal from the magnetometer, and sent this into the MOKU:Go in multi instrument mode. We then phase shifted the sin wave produced by the Moku to be in phase with the 60Hz wave in the magnetometer reading. We then sent the in phase sin wave from the AWG to the second MOSFET in our circuit to shunt away current at this frequency to attenuate 60Hz in the magnetic field.
+
+As a result, the 60Hz in the magnetic field was attenuated. 
 
 ## 60Hz Harmonic Cancellation
 <div align="center">
