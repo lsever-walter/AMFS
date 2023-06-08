@@ -94,7 +94,7 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 <div align="center">
 <img src="https://github.com/lsever-walter/AMFS/blob/aeaafa04ac33c4959e7f986978e2067f9bd21d4b/Figures/fb_psd.png" width="1000">
 </div>
-When the PID feedback is off, there are significant noises in our magnetic field signal that are mostly composed of 60 Hz harmonics. As the feedback is enabled, the standard deviation decreased from 3.9 mG to 0.8 mG. We also observed a distinct attenuation of power in small frequencies range of our FFT plot. However, there still remain 60 Hz harmonics peaks that are slightly reduced by PID feedback. By integrating the power spectral density over frequencies from 0 to 300 Hz, above which the PID feedback ceases to effect, we obtain an area ratio of 163.
+When the PID feedback was off, there were significant noises in our magnetic field signal that were mostly composed of 60 Hz harmonics. As the feedback was enabled, the standard deviation decreased from 3.9 mG to 0.8 mG. We observed a distinct attenuation of power in small frequencies range of our FFT plot. However, there still remained 60 Hz harmonics peaks that are slightly reduced by PID feedback. By integrating the power spectral density over frequencies from 0 to 300 Hz, above which the PID feedback ceases to effect, we obtained an area ratio of 163.
 
 # Feedforward Control
 
@@ -112,12 +112,13 @@ We then obtained the signal from the magnetometer, and sent this into the MOKU:G
 <div align="center">
 <img src="https://github.com/lsever-walter/AMFS/blob/aeaafa04ac33c4959e7f986978e2067f9bd21d4b/Figures/ff_psd%2Binset.png" width="1000">
 </div>
+The power spectral densities over frequency corresponding to cases of feedforward on and feedforward off are nearly identical, as what we have expected. This is because we were outputing a 60 Hz sinusoidal wave that is in phase with the magnetometer signals, the rest of the spectrum should, therefore, be highly similar. As we zoomed into the region of interest (f = 60 Hz), we observed an approximaely 8 dB attenuation at 60 Hz by subtracting the peaks to their respective noise floors, which are about the same in this case. 
 
 # Feedback and Feedforward
 <div align="center">
 <img src="https://github.com/lsever-walter/AMFS/blob/aeaafa04ac33c4959e7f986978e2067f9bd21d4b/Figures/ff%2Bfb_psd%2Binset.png" width="1000">
 </div>
-
+After the individual implmentation of PID feedback and mains electricity feedforward, we combined both methods to further attenuate the noises in our signal. The standard deviation was reduced to 0.4 mG, as contrast to 0.8 mG for PID feedback alone. There was about 35 dB attenuation of power spectral density at 60 Hz, from which we obtained by subtracting the peak value at 60 Hz from their respective noise floors. Through integrating the power spectral density to the bandwidths of PID feedback alone (f = 300 Hz) and of Feedback and Feedforward (f = 850 Hz), we calculated area ratios of 705 and 65, respectively.
 
 # Future Work
 For our future work we hope to implement the stabilization setup developed above on a linear paul trap. We hope to first move optimize our circuits with voltage regulators to protect the operation amplifiers and coils from DC current spikes that could damage the circuitry and potentially the magnetometer. We would then like to implement feedforward for further 60Hz harmonics to attenuate up to 240Hz which would likely increase our PID bandwidth as well. Finally, we would then aim to implement our setup on a linear paul trap by designing new coils to it the ion trap geometry and then use the ion itself to quantify the magnetic field stability in addition to, or perhaps instead of, the magnetometer. 
