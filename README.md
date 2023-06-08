@@ -94,9 +94,7 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 <div align="center">
 <img src="https://github.com/lsever-walter/AMFS/blob/aeaafa04ac33c4959e7f986978e2067f9bd21d4b/Figures/fb_psd.png" width="1000">
 </div>
-
-
-
+When the PID feedback is off, there are significant noises in our magnetic field signal that are mostly composed of 60 Hz harmonics. As the feedback is enabled, the standard deviation decreased from 3.9 mG to 0.8 mG. We also observed a distinct attenuation of power in small frequencies range of our FFT plot. However, there still remain 60 Hz harmonics peaks that are slightly reduced by PID feedback. By integrating the power spectral density over frequencies from 0 to 300 Hz, above which the PID feedback ceases to effect, we obtain an area ratio of 163.
 
 # Feedforward Control
 
