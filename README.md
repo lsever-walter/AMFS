@@ -44,10 +44,10 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 # Components
 
 1. MOKU:Go - Microcontroller to act as Oscilloscope, PID loop, and AWG
-2. MOSFET N Channel - 
-3. OPAMP LM358AP - Low Noise OP AMP
-4. Bartington Magnetometer
-5. Oscilloscope DS1064
+2. MOSFET N Channel - Transistor with input pin, and sends current from drain to source pins
+3. OPAMP LM358AP - Low Noise OP AMP 
+4. Bartington Magnetometer - reads magnetic field 0-10G, 3kHz bandwidth 
+5. Oscilloscope DS1064 - with option to AC line trigger
 
 
 # Schematic
@@ -91,9 +91,11 @@ The Bartington Magnetometer is placed at the center of the coils, and sends its 
 
 The output of the PID loop was a signal that we sent into a Non-Inverting Amplifier, then to the MOSFET in parallel with our coils. 
 
-The NonInverting Amplifier circuit consisted of an OpAmp, two resistors, and a capacitor 
+The NonInverting Amplifier circuit consisted of an OpAmp, two resistors, and a capacitor. The circuit is below, and the gain of this circuit is 6. The purpose of this circuit is to set the input of the MOSFET in the middle of its range of 0-60 volts. We would then have more control on how much it attenuates the signal. 
 
 <image src="https://github.com/lsever-walter/AMFS/assets/125600843/16d5f4ce-35c8-47ca-8451-a88659c782ef">
+  
+The output of this circuit was sent to the MOSFET to shunt current accordingly to ground.
 
 ## Tuning Controller
 <div align="center">
