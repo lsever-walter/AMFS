@@ -43,14 +43,15 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 
 # Components
 
-1. MOKU:Go 
-2. MOSFET N Channel
-3. OPAMP LM358AP
+1. MOKU:Go - Microcontroller to act as Oscilloscope, PID loop, and AWG
+2. MOSFET N Channel - 
+3. OPAMP LM358AP - Low Noise OP AMP
 4. Bartington Magnetometer
 5. Oscilloscope DS1064
 
 
 # Schematic
+
 
 
 ## Experimental Setup
@@ -72,8 +73,6 @@ Our Experimental Setup consists of two coils
 </div>
 
 
-
-
 ## Helmholtz Coils
 <div align="center">
 <img src="https://github.com/lsever-walter/AMFS/blob/4d71a22e017c13e0bc0db5ba8c13be6a7f2043e5/Figures/helmholtz_coils.png" width="1000">
@@ -84,12 +83,17 @@ Our Experimental Setup consists of two coils
 <img src="https://github.com/lsever-walter/AMFS/blob/36878cb2ec26542b7947e824e373250a5f17f6a9/Figures/bartington-mag03.png" width="1000">
 </div>
 
-
-
 # Feedback Control
 
-## PID Controller (Moku Go)
+Our feedback loop consists of a magnetometer, a PID loop in MOKU:Go, and a MOSFET in parallel to the coils shunting current to ground to modulate the field. 
 
+The Bartington Magnetometer is placed at the center of the coils, and sends its reading to the first input pin of the MOKU:Go. The voltage to field ratio of the magnetometer is 1V/G. This is sent to the MOKU's PID loop, where we varied the P and I parameters to reduce the standard deviation as much as possible. The D term was not used as this ended up saturating the PID loop once the external magnetic field became too high. We tuned the parameters to optimize for long term drift cancellation, so Feedforward could handle the faster moving deviations. 
+
+The output of the PID loop was a signal that we sent into a Non-Inverting Amplifier, then to the MOSFET in parallel with our coils. 
+
+The NonInverting Amplifier circuit consisted of an OpAmp, two resistors, and a capacitor 
+
+<image src="https://github.com/lsever-walter/AMFS/assets/125600843/16d5f4ce-35c8-47ca-8451-a88659c782ef">
 
 ## Tuning Controller
 <div align="center">
