@@ -43,11 +43,11 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 
 # Components
 
-1. MOKU:Go - Microcontroller to act as Oscilloscope, PID loop, and AWG
-2. MOSFET N Channel - Transistor with input pin, and sends current from drain to source pins
-3. OPAMP LM358AP - Low Noise OP AMP 
-4. Bartington Magnetometer - reads magnetic field 0-10G, 3kHz bandwidth 
-5. Oscilloscope DS1064 - with option to AC line trigger
+1. [MOKU:Go](https://www.mouser.com/ProductDetail/Liquid-Instruments/MOKUGO-M2-WHITE?qs=XAiT9M5g4x%2FfNk%2F%252BrYDr5A%3D%3D&mgh=1&gclid=CjwKCAjw-IWkBhBTEiwA2exyO_NAC4Yzw-N6Kk_8Ar5idSuqgZzDE3XjnfIC7eEdjNcVtmOxlln81RoCZbEQAvD_BwE) - Microcontroller to act as Oscilloscope, PID loop, and AWG
+2. [MOSFET N Channel](https://media.digikey.com/pdf/Data%20Sheets/ST%20Microelectronics%20PDFS/2N7000,%202N7002.pdf) - Transistor with input pin, and sends current from drain to source pins
+3. [OPAMP LM358AP](https://www.digikey.com/en/products/detail/texas-instruments/LM358AP/379836?utm_adgroup=Texas%20Instruments&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Supplier_Texas%20Instruments&utm_term=&utm_content=Texas%20Instruments&gclid=CjwKCAjw-IWkBhBTEiwA2exyO5folY13R_LqYqakT_OlBMVobZKeyYGEDrK9Rew3klFTzHKU20AtqRoCejcQAvD_BwE) - Low Noise OP AMP 
+4. [Bartington Magnetometer](https://www.bartington.com/products/high-performance-magnetometers/mag-03-three-axis/) - reads magnetic field 0-10G, 3kHz bandwidth 
+5. [Oscilloscope DS1064](https://www.tequipment.net/RigolDS1064B.html) - with option to AC line trigger
 
 
 # Schematic
