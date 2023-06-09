@@ -1,5 +1,5 @@
 # Active Magnetic Field Stabilization
-Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize these magnetic fields to within a signal-noise ratio of 1e3 for longterm drift (over the course of hours to days) and for 60Hz harmonic noise. This magnetic field stabilization scheme will improve stability for experiments that rely on (near) constant magnetic fields.
+Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize these magnetic fields to within a signal-noise ratio of $10^3$ for longterm drift (over the course of hours to days) and for 60Hz harmonic noise. This magnetic field stabilization scheme will improve stability for experiments that rely on (near) constant magnetic fields.
 
 ## Table of Contents
 - [Motivation](#Motivation)
@@ -65,6 +65,7 @@ Our Experimental Setup consists of two coils which produce the Helmholtz Field a
 <img src="https://github.com/lsever-walter/AMFS/blob/3bf59b4830adf94e066e491f6b5c1523c0db8228/Figures/Moku_Go.png" width="1000">
 </div>
 
+The Moku:Go is a multi-instrument controller that has high sensitivty, sample rate, and output rate which made it ideal to use for this project. The Moku:Go acted as an oscilloscope for the voltage readings from our magnetometer and processed those readings in its PID Controller that was used to generate the feedback error signal. The Moku:Go also had a built in Artbitrary Wave Form generator with which linear combinations of sin waves of different frequencies, amplitudes, and phases could be output and with which feedforward was accomplished. All of our data was also logged using the Moku:Go data logger instrument which has high sample rate and resolution. The Moku:Go power supplies were not used since constant current mode could not be reliably achieved to output .5A to our coil circuit since the impedence of the circuit exceded 5V.
 
 
 
