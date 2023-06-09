@@ -74,6 +74,7 @@ The Moku:Go is a multi-instrument controller that has high sensitivty, sample ra
 <img src="https://github.com/lsever-walter/AMFS/blob/ad475d0d4a1821c7e7b7b4b00d3e2eecd4d2d88b/Figures/MOSFET_shunt.png" width="1000">
 </div>
 
+We used an N Channel Depletion Type MOSFET as our shunt transistor to control the current flow through the coils. The MOSFET is a "Metal Oxide Semiconductor" Field Effect Transistor which can change its resistance in response to an applied voltage to its gate. The MOSFET(s) were placed in parallel with the coils and the error signal from the Moku:Go was output to their drains to modulate their resistance and consequently the current passing through the coils to do feedback and feedforward control.
 
 ## Helmholtz Coils
 <div align="center">
