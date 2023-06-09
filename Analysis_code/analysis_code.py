@@ -20,7 +20,14 @@ v11 = np.array(data1[:, 2])
 
 
 def absFFT(times,amplitude):
-    '''Function to preform a fast fourier transform on voltage vs time data from the magnetic field'''
+    '''Function to preform a fast fourier transform on voltage vs time data from the magnetic field
+    Inputs: 
+        times: numpy array of times
+        amplitude: numpy array of voltage
+    Return:
+        frequencies: numpy array of fft frequency array
+        abs(FT): abs value of the fourier spectrum of the amplitude array
+        '''
     fourierTransform = np.fft.fft(amplitude)/len(amplitude)
     fourierTransform = fourierTransform[range(int(len(amplitude)/2))]
     samplingFrequency = 1/((times[-1]-times[0])/len(times))
@@ -31,7 +38,9 @@ def absFFT(times,amplitude):
     return frequencies, abs(fourierTransform)
 
 def drift_quantify(v0):
-    '''return the standard deviation and root mean square value of the magnetic field'''
+    '''return the standard deviation and root mean square value of the magnetic field
+    Input: numpy array of data
+    Return: numpy array'''
     v_std = np.std(v0)
     v_rms = np.sqrt(np.mean(v0**2))
     print(f"The standard deviation is: {v_rms}")
@@ -40,7 +49,8 @@ def drift_quantify(v0):
 
 
 def integrator(t, v):
-    '''integrate under the powerspectrum vs frequency graph to determine noise reduction'''
+    '''integrate under the powerspectrum vs frequency graph using the simpson method to determine noise reduction
+    '''
     freq, fft = absFFT(t,v)
     freq = freq[0:1000]
     fft= fft[0:1000]
@@ -49,6 +59,8 @@ def integrator(t, v):
 
 def plot_data(t, v):
     '''plot and save raw data to a csv file'''
+    
+    #setup up plots
     fig, ax = plt.subplots(1, 1, num=3)
     ax.plot(t, v)
     ax.set_xlabel("Time [s]")
@@ -56,6 +68,7 @@ def plot_data(t, v):
     ax.set_xlim((-.25+min(t), .25+max(t)))
     ax.set_ylim((min(v)-.005, .005+max(v)))
 
+    #setup legend and axes 
     ax.legend(loc='upper left', fontsize=16)
     ax.tick_params(axis='both', which='both', direction='in',
                         top=True, right=True, labelsize=16)
@@ -70,13 +83,18 @@ def plot_data(t, v):
 
 def plotFourrier(t, v, log=False):
     '''plot fourrier transform, can choose to plot loglog. WARNING: the loglog code should be updated to make sure the units are in dBG/sqrt(Hz), can be done with scipy'''
+    
+    #find frequency and power spectrum of voltage-time series
     freq, fft = absFFT(t,v)
     
+    #integrate under the curve
     area = round(integrator(t, v), 6)
 
+    #adjust the data plotted in case DC signal should be neglected
     freq = freq[1:]
     fft = fft[1:]
 
+    #setup plots
     fig, ax = plt.subplots(1, 1, num=1)
     ax.plot(freq, fft, label=f"Area= {area}")
     ax.set_xlabel("frequency [Hz]")
@@ -84,6 +102,7 @@ def plotFourrier(t, v, log=False):
     ax.set_xlim((min(freq), 1000))
     ax.set_ylim((min(fft)-(4e-6), .00005+max(fft)))
 
+    #setup legend and axes
     ax.legend(loc='upper left', fontsize=16)
     ax.tick_params(axis='both', which='both', direction='in',
                         top=True, right=True, labelsize=16)
@@ -92,13 +111,12 @@ def plotFourrier(t, v, log=False):
     ax.xaxis.label.set_size(20)
     ax.yaxis.label.set_size(20)
 
+    #check if log=True is given, and adjust axes and labels accordingky
     if log:
         ax.set_xscale('log')
         ax.set_yscale('log')
         ax.set(xlabel='Log(Frequency)', xlim=None)
         ax.set(ylabel='Log(Power)', ylim=None)
-        
-        
         
         #plt.savefig("/Users/lseverwalter/code/AMFS/Controller/Filter_Test/FFT/lowpass_filter_test_ll_1", dpi=300, transparent=False)
 
@@ -114,19 +132,23 @@ def overplot_fourrier(t0, v0, t1, v1, log=False):
     '''plot fourrier transform of two data sets over each other,
     can choose to plot loglog. 
     WARNING: the loglog code should be updated to make sure the units are in dBG/sqrt(Hz), can be done with scipy'''
+    
+    #get frequency and amplitude arrays for both data sets
     freq0, fft0 = absFFT(t0,v0)
     freq1, fft1 = absFFT(t1, v1)
 
+    #numerical integration for both curves
     area0 = round(integrator(t0, v0), 6)
     area1 = round(integrator(t1, v1), 6)
 
+    #adjust the plotting range to eliminate DC signal
     freq0 = freq0[2:]
     fft0 = fft0[2:]
     
     freq1 = freq1[2:]
     fft1 = fft1[2:]
 
-
+    #check if log and make the adjustments to the data and plots
     if log:
         fft0 = 20 * np.log10(fft0)
         fft1 = 20 * np.log10(fft1)
