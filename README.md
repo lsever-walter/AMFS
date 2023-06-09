@@ -54,9 +54,10 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 
 
 
+
 ## Experimental Setup
 
-Our Experimental Setup consists of two coils
+Our Experimental Setup consists of two coils which produce the Helmholtz Field at the center (in our case, 3G). The magnetometer is placed at the center of the coils, and the reading is sent to the MOKU:Go. The microcontroller is connected to a laptop, with which we use the MOKU software to create the PID loop and control its parameters. The output is send to a circuit (we implemented it on a breadboard, but optimally a PCB), where we shunt current away current to alter the magnetic field. An oscilloscope is used to line trigger on the AC power wall to implement Feedforward.
 
 
 ## Moku Go
