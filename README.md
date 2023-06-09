@@ -80,7 +80,7 @@ The Moku:Go is a multi-instrument controller that has high sensitivty, sample ra
 <img src="https://github.com/lsever-walter/AMFS/blob/4d71a22e017c13e0bc0db5ba8c13be6a7f2043e5/Figures/helmholtz_coils.png" width="1000">
 </div>
 
-Coils in a Helmholtz Configuration were used for this project due to the stability of the magnetic field in the center of the coils. The coils were placed in series so that the magnetic field pointed in the same direction along the quantization axes parallel to the magnetometer and perpendicular to the plane of the coils with a magnitude $B=(\frac[4}{5})\frac{\mu_{0}NI}{a}$.
+Coils in a Helmholtz Configuration were used for this project due to the stability of the magnetic field in the center of the coils. The coils were placed in series so that the magnetic field pointed in the same direction along the quantization axes parallel to the magnetometer and perpendicular to the plane of the coils with a magnitude $B=(\frac{4}{5})\frac{\mu_{0}NI}{a}$.
 
 ## Magnetometer
 <div align="center">
