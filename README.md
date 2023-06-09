@@ -20,6 +20,7 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
   - [60Hz Harmonic Cancellation](#60Hz-Harmonic-Cancellation)
 - [Combined Feedback Feedforward Control](#Feedback-and-Feedforward)
 - [Future Work](#Future-Work)
+- [Contributors](#Contributors)
   
 
   
@@ -140,7 +141,8 @@ After the individual implmentation of PID feedback and mains electricity feedfor
 # Future Work
 For our future work we hope to implement the stabilization setup developed above on a linear paul trap. We hope to first move optimize our circuits with voltage regulators to protect the operation amplifiers and coils from DC current spikes that could damage the circuitry and potentially the magnetometer. We would then like to implement feedforward for further 60Hz harmonics to attenuate up to 240Hz which would likely increase our PID bandwidth as well. Finally, we would then aim to implement our setup on a linear paul trap by designing new coils to it the ion trap geometry and then use the ion itself to quantify the magnetic field stability in addition to, or perhaps instead of, the magnetometer. 
 
-
+# Contributors
+This work was primarily done by Luka Sever-Walter, Xuanwei Liang, and Samyuktha Ramanan for 15CL at UCSB.
 
 
 
