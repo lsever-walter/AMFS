@@ -102,8 +102,8 @@ The output of the PID loop was a signal that we sent into a Non-Inverting Amplif
 
 The NonInverting Amplifier circuit consisted of an OpAmp, two resistors, and a capacitor. The circuit is below, and the gain of this circuit is 6. The purpose of this circuit is to set the input of the MOSFET in the middle of its range of 0-60 volts. We would then have more control on how much it attenuates the signal. 
 
-<image src="https://github.com/lsever-walter/AMFS/assets/125600843/16d5f4ce-35c8-47ca-8451-a88659c782ef">
-  
+<image src="https://github.com/lsever-walter/AMFS/assets/125600843/0734a2d0-c5d2-4a97-9a83-c12c311680be">
+ 
 The output of this circuit was sent to the MOSFET to shunt current accordingly to ground.
 
 ## Tuning Controller
