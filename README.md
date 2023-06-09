@@ -87,7 +87,7 @@ Coils in a Helmholtz Configuration were used for this project due to the stabili
 <img src="https://github.com/lsever-walter/AMFS/blob/36878cb2ec26542b7947e824e373250a5f17f6a9/Figures/bartington-mag03.png" width="1000">
 </div>
 
-The magnetometer used in this project was a Bartington Mag-03 fluxgate magnetometer that had a sensor bandwidth of 3kHz and a measuring range of .7 to 10G. The sensor noise floor is <6pTrms/ $\sqrt{Hz}$ at 1Hz and offered excellent resolution required for precise PID feedback control. The magnetometer output a voltage signal with a 1:1 ration between volts and gauss to the Moku:Go which applied the PID controller to it. In the future, this magnetometer's ability to sense along three sepperate axes could allow for active magnetic field stabilization along three quantization axes or to sense a magnetic field gradient along one axes. 
+The magnetometer used in this project was a Bartington Mag-03 fluxgate magnetometer that had a sensor bandwidth of 3kHz and a measuring range of .7 to 10G. The sensor noise floor is <6pTrms per $\sqrt{Hz}$ at 1Hz and offered excellent resolution required for precise PID feedback control. The magnetometer output a voltage signal with a 1:1 ration between volts and gauss to the Moku:Go which applied the PID controller to it. In the future, this magnetometer's ability to sense along three sepperate axes could allow for active magnetic field stabilization along three quantization axes or to sense a magnetic field gradient along one axes. 
 
 
 # Feedback Control
