@@ -5,7 +5,6 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
 - [Motivation](#Motivation)
   - [Zeeman Sublevels and Fine Structure](#Zeeman-Sublevels-and-Fine-Structure)
   - [Zeeman Effect](#The-Zeeman-Effect)
-- [Repository File Structure](#Repository-File-Structure)
 - [Components List](#Components-List)
 - [Schematics and Components](#Schematics-and-Components)
   - [Experimental Setup](#Experimental-Setup)
@@ -21,6 +20,7 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
   - [60Hz Harmonic Cancellation](#60Hz-Harmonic-Cancellation)
 - [Combined Feedback Feedforward Control](#Feedback-and-Feedforward)
 - [Future Work](#Future-Work)
+- [Repository File Structure](#Repository-File-Structure)
 - [Contributors](#Contributors)
   
 
@@ -42,10 +42,6 @@ In many physics groups investigating the interaction between light and matter us
 
 Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Sublevels of an atom during the course of an experiment causing a loss in precision and failure of an experiment. Therefore, to run many atomic and molecular optics, or AMO, experiments it is vital to stabilize the magnetic field experienced by the confined atoms or molecules against ambient magnetic field noise. The goal of our project was to generate and stabilize a 3 Guass magnetic field against slow and fast magnetic field drift as well as the 60Hz harmonics from the mains electricity.
 
-
-# Repository File Structure
-  
-All of the analysis and plotting of our data was done in python and the code used along with the plots included in this README are in the `AMFS/Analysis_code` subdirectory. The raw data is saved in CSV file format in the `AFMS/Data` subdirectory and can be used to reproduce or customize the included plots. The PCB schematics for the circuit board we want to use in the future have been included in the `AMFS/PCB Schematics` folder, however these were not used for this project and have not been tested. We have also included a pdf of our final presentation for this work in the `AFMS/Presentation` subdirectory. All schematics, photographs, and figures appearing in this README are stored in the `AMFS/Figures` folder. Finally, we included test scripts made public by liquid instruments to help with trouble shooting the Moku python API in the `AMFS/Controller` folder. This code was not used for this work but may be useful in the future should we want to switch to the Moku python API instead of the Moku Desktop App. 
 
 # Components List
 
@@ -144,10 +140,14 @@ The power spectral densities over frequency corresponding to cases of feedforwar
 </div>
 After the individual implmentation of PID feedback and mains electricity feedforward, we combined both methods to further attenuate the noises in our signal. The standard deviation was reduced to 0.4 mG, as contrast to 0.8 mG for PID feedback alone. There was about 35 dB attenuation of power spectral density at 60 Hz, from which we obtained by subtracting the peak value at 60 Hz from their respective noise floors. Through integrating the power spectral density to the bandwidths of PID feedback alone (f = 300 Hz) and of Feedback and Feedforward (f = 850 Hz), we calculated area ratios of 705 and 65, respectively.
 
-
 # Future Work
 For our future work we hope to implement the stabilization setup developed above on a linear paul trap. We hope to first move optimize our circuits with voltage regulators to protect the operation amplifiers and coils from DC current spikes that could damage the circuitry and potentially the magnetometer. We would then like to implement feedforward for further 60Hz harmonics to attenuate up to 240Hz which would likely increase our PID bandwidth as well. Finally, we would then aim to implement our setup on a linear paul trap by designing new coils to it the ion trap geometry and then use the ion itself to quantify the magnetic field stability in addition to, or perhaps instead of, the magnetometer. 
 
+
+# Repository File Structure
+  
+All of the analysis and plotting of our data was done in python and the code used along with the plots included in this README are in the `AMFS/Analysis_code` subdirectory. The raw data is saved in CSV file format in the `AFMS/Data` subdirectory and can be used to reproduce or customize the included plots. The PCB schematics for the circuit board we want to use in the future have been included in the `AMFS/PCB Schematics` folder, however these were not used for this project and have not been tested. We have also included a pdf of our final presentation for this work in the `AFMS/Presentation` subdirectory. All schematics, photographs, and figures appearing in this README are stored in the `AMFS/Figures` folder. Finally, we included test scripts made public by liquid instruments to help with trouble shooting the Moku python API in the `AMFS/Controller` folder. This code was not used for this work but may be useful in the future should we want to switch to the Moku python API instead of the Moku Desktop App. 
+  
 # Contributors
 This work was primarily done by Luka Sever-Walter, Xuanwei Liang, and Samyuktha Ramanan for 15CL at UCSB.
 
