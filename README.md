@@ -63,7 +63,7 @@ Our Experimental Setup consists of two coils which produce the Helmholtz Field a
 
 ## Moku Go
 <div align="center">
-<img src="https://github.com/lsever-walter/AMFS/blob/3bf59b4830adf94e066e491f6b5c1523c0db8228/Figures/Moku_Go.png" width="1000">
+<img src="https://github.com/lsever-walter/AMFS/blob/3bf59b4830adf94e066e491f6b5c1523c0db8228/Figures/Moku_Go.png" width="400">
 </div>
 
 The Moku:Go is a multi-instrument controller that has high sensitivty, sample rate, and output rate which made it ideal to use for this project. The Moku:Go acted as an oscilloscope for the voltage readings from our magnetometer and processed those readings in its PID Controller that was used to generate the feedback error signal. The Moku:Go also had a built in Artbitrary Wave Form generator with which linear combinations of sin waves of different frequencies, amplitudes, and phases could be output and with which feedforward was accomplished. All of our data was also logged using the Moku:Go data logger instrument which has high sample rate and resolution. The Moku:Go power supplies were not used since constant current mode could not be reliably achieved to output .5A to our coil circuit since the impedence of the circuit exceded 5V.
@@ -72,21 +72,21 @@ The Moku:Go is a multi-instrument controller that has high sensitivty, sample ra
 
 ## N Channel Mosfet
 <div align="center">
-<img src="https://github.com/lsever-walter/AMFS/blob/ad475d0d4a1821c7e7b7b4b00d3e2eecd4d2d88b/Figures/MOSFET_shunt.png" width="1000">
+<img src="https://github.com/lsever-walter/AMFS/blob/ad475d0d4a1821c7e7b7b4b00d3e2eecd4d2d88b/Figures/MOSFET_shunt.png" width="400">
 </div>
 
 We used an N Channel Depletion Type MOSFET as our shunt transistor to control the current flow through the coils. The MOSFET is a "Metal Oxide Semiconductor" Field Effect Transistor which can change its resistance in response to an applied voltage to its gate. The MOSFET(s) were placed in parallel with the coils and the error signal from the Moku:Go was output to their drains to modulate their resistance and consequently the current passing through the coils to do feedback and feedforward control.
 
 ## Helmholtz Coils
 <div align="center">
-<img src="https://github.com/lsever-walter/AMFS/blob/4d71a22e017c13e0bc0db5ba8c13be6a7f2043e5/Figures/helmholtz_coils.png" width="1000">
+<img src="https://github.com/lsever-walter/AMFS/blob/4d71a22e017c13e0bc0db5ba8c13be6a7f2043e5/Figures/helmholtz_coils.png" width="400">
 </div>
 
 Coils in a Helmholtz Configuration were used for this project due to the stability of the magnetic field in the center of the coils. The coils were placed in series so that the magnetic field pointed in the same direction along the quantization axes parallel to the magnetometer and perpendicular to the plane of the coils with a magnitude $B=(\frac{4}{5})\frac{\mu_{0}NI}{a}$. The resistance of the coils used was on the order of $.3\Omega$ which meant that driving a total current of .25A through our circuit and >.1A through the coils resulted in a 3G magnetic field.
 
 ## Magnetometer
 <div align="center">
-<img src="https://github.com/lsever-walter/AMFS/blob/36878cb2ec26542b7947e824e373250a5f17f6a9/Figures/bartington-mag03.png" width="1000">
+<img src="https://github.com/lsever-walter/AMFS/blob/36878cb2ec26542b7947e824e373250a5f17f6a9/Figures/bartington-mag03.png" width="400">
 </div>
 
 The magnetometer used in this project was a Bartington Mag-03 fluxgate magnetometer that had a sensor bandwidth of 3kHz and a measuring range of .7 to 10G. The sensor noise floor is <6pTrms per $\sqrt{Hz}$ at 1Hz and offered excellent resolution required for precise PID feedback control. The magnetometer output a voltage signal with a 1:1 ration between volts and gauss to the Moku:Go which applied the PID controller to it. In the future, this magnetometer's ability to sense along three sepperate axes could allow for active magnetic field stabilization along three quantization axes or to sense a magnetic field gradient along one axes. 
