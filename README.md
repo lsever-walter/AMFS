@@ -5,8 +5,8 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
 - [Motivation](#Motivation)
   - [Zeeman Sublevels and Fine Structure](#Zeeman-Sublevels-and-Fine-Structure)
   - [Zeeman Effect](#The-Zeeman-Effect)
-- [Components](#Components)
-- [Schematic](#Schematic)
+- [Components-List](#Components-List)
+- [Schematics and Components](#Schematics-and-Components)
   - [Experimental Setup](#Experimental-Setup)
   - [Moku Go](#Moku-Go)
   - [N Channel MOSFET](#N-Channel-Mosfet)
@@ -42,7 +42,7 @@ In many physics groups investigating the interaction between light and matter us
 Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Sublevels of an atom during the course of an experiment causing a loss in precision and failure of an experiment. Therefore, to run many atomic and molecular optics, or AMO, experiments it is vital to stabilize the magnetic field experienced by the confined atoms or molecules against ambient magnetic field noise. The goal of our project was to generate and stabilize a 3 Guass magnetic field against slow and fast magnetic field drift as well as the 60Hz harmonics from the mains electricity.
 
 
-# Components
+# Components List
 
 1. [MOKU:Go](https://www.mouser.com/ProductDetail/Liquid-Instruments/MOKUGO-M2-WHITE?qs=XAiT9M5g4x%2FfNk%2F%252BrYDr5A%3D%3D&mgh=1&gclid=CjwKCAjw-IWkBhBTEiwA2exyO_NAC4Yzw-N6Kk_8Ar5idSuqgZzDE3XjnfIC7eEdjNcVtmOxlln81RoCZbEQAvD_BwE) - Microcontroller to act as Oscilloscope, PID loop, and AWG
 2. [MOSFET N Channel](https://media.digikey.com/pdf/Data%20Sheets/ST%20Microelectronics%20PDFS/2N7000,%202N7002.pdf) - Transistor with input pin, and sends current from drain to source pins
@@ -51,14 +51,15 @@ Unfortunately, ambient magnetic fields in the laboratory can shift the Zeeman Su
 5. [Oscilloscope DS1064](https://www.tequipment.net/RigolDS1064B.html) - with option to AC line trigger
 
 
-# Schematic
-
-
-
+# Schematics and Components
 
 ## Experimental Setup
 
-Our Experimental Setup consists of two coils which produce the Helmholtz Field at the center (in our case, 3G). The magnetometer is placed at the center of the coils, and the reading is sent to the MOKU:Go. The microcontroller is connected to a laptop, with which we use the MOKU software to create the PID loop and control its parameters. The output is send to a circuit (we implemented it on a breadboard, but optimally a PCB), where we shunt current away current to alter the magnetic field. An oscilloscope is used to line trigger on the AC power wall to implement Feedforward.
+<div align="center">
+<img src="https://github.com/lsever-walter/AMFS/blob/5eaf32ce657c19202164cb2950f0a36218040c1e/PCB%20Schematics/schematics.PNG" width="400">
+</div>
+
+Our Experimental Setup consists of two coils which produce the Helmholtz Field at the center (in our case, 3G). The magnetometer is placed at the center of the coils, and the voltage reading is sent to the Moku:Go controller. The controller is connected to a laptop on which we use the Moku software to run the PID loop and control its parameters. The PID loop output error signal is sent to a shunt transistor on the bread board (see [Future-Work](#Future-Work) for our plans to optimize the circuit on a pcb) that shunts current from the coils to alter the magnetic field. Simulatenously, an oscilloscope is used to line trigger a TTL signal from the 60Hz frequency in the AC line from the wall outlet which is input to the Moku:Go and is used to trigger the Moku:Go Arbitrary Waveform Generator (AWG). The AWG signal is sent to the second shunt transistor which is used for feedforward.
 
 
 ## Moku Go
