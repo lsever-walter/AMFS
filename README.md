@@ -164,7 +164,8 @@ After the individual implmentation of PID feedback and mains electricity feedfor
 15. Now it’s ready for testing the stabilization performance.
 16. Note that this is very finely tuned for whatever setup you have it set to, so if you move a magnet within the vicinity or move a current carrying wire within the vicinity, you likely will have to re-calibrate by adjusting the DAC output offset in the Qnimble applet again.
 17. Here are some parameters have performed well previously:
-
+P=0.0005, I=0.05, D=0, SP=0, DAC=0.414
+The optimal DAC (DAC offset) value will probably differ, see the above setup guide for proper DAC tuning.
 
 
 ## Two Probe Stabilization Data
