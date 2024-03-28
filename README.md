@@ -19,6 +19,7 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
   - [Line Triggering](#Line-Triggering)
   - [60Hz Harmonic Cancellation](#60Hz-Harmonic-Cancellation)
 - [Combined Feedback Feedforward Control](#Feedback-and-Feedforward)
+- [Two Probe Setup Guide with Qnimble and LNA](#Two-Probe-Stabilization-Setup-Guide)
 - [Future Work](#Future-Work)
 - [Repository File Structure](#Repository-File-Structure)
 - [Contributors](#Contributors)
@@ -140,7 +141,7 @@ The power spectral densities over frequency corresponding to cases of feedforwar
 </div>
 After the individual implmentation of PID feedback and mains electricity feedforward, we combined both methods to further attenuate the noises in our signal. The standard deviation was reduced to 0.4 mG, as contrast to 0.8 mG for PID feedback alone. There was about 35 dB attenuation of power spectral density at 60 Hz, from which we obtained by subtracting the peak value at 60 Hz from their respective noise floors. Through integrating the power spectral density to the bandwidths of PID feedback alone (f = 300 Hz) and of Feedback and Feedforward (f = 850 Hz), we calculated area ratios of 705 and 65, respectively.
 
-# Two Probe Stabilization Setup Guide with Qnimble and LNA
+# Two Probe Stabilization Setup Guide
 
 The moku:go will be used for live measurements so you can tune things more quickly, the Qnimble is what’s actually used as the PID controller. 
 Two BNC connectors go from the two magnetometer output ports that are being used to the LNA setup with the breadboard. Each BNC coming from the magnetometer should have a BNC to banana adapter on the end. The grounds of the banana adapters should be connected. The positive side of the banana adapters should go into the breadboard’s banana connector slots, one into the breadboard’s ground (green female end banana connector on the breadboard) and one into the breadboard’s Vb (black female end banana connector on the breadboard). 
