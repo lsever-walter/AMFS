@@ -19,7 +19,9 @@ Our goal is to generate magnetic fields on the order of 3 Gauss and to stabilize
   - [Line Triggering](#Line-Triggering)
   - [60Hz Harmonic Cancellation](#60Hz-Harmonic-Cancellation)
 - [Combined Feedback Feedforward Control](#Feedback-and-Feedforward)
-- [Two Probe Setup Guide with Qnimble and LNA](#Two-Probe-Stabilization-Setup-Guide-with-Qnimble-and-LNA)
+- [Two Probe Stabilization with Qnimble and LNA](#Two-Probe-Stabilization-with-Qnimble-and-LNA)
+  -[Two Probe Setup Guide](#Two-Probe-Stabilization-Setup-Guide)
+  -[Two Probe Data](#Two-Probe-Stabilization-Data)
 - [Future Work](#Future-Work)
 - [Repository File Structure](#Repository-File-Structure)
 - [Contributors](#Contributors)
@@ -141,8 +143,9 @@ The power spectral densities over frequency corresponding to cases of feedforwar
 </div>
 After the individual implmentation of PID feedback and mains electricity feedforward, we combined both methods to further attenuate the noises in our signal. The standard deviation was reduced to 0.4 mG, as contrast to 0.8 mG for PID feedback alone. There was about 35 dB attenuation of power spectral density at 60 Hz, from which we obtained by subtracting the peak value at 60 Hz from their respective noise floors. Through integrating the power spectral density to the bandwidths of PID feedback alone (f = 300 Hz) and of Feedback and Feedforward (f = 850 Hz), we calculated area ratios of 705 and 65, respectively.
 
-# Two Probe Stabilization Setup Guide with Qnimble and LNA
+# Two Probe Stabilization with Qnimble and LNA
 
+## Two Probe Stabilization Setup Guide
 1. The moku:go will be used for live measurements so you can tune things more quickly, the Qnimble is what’s actually used as the PID controller. 
 
 2. Two BNC connectors go from the two magnetometer output ports that are being used to the LNA setup with the breadboard. Each BNC coming from the magnetometer should have a BNC to banana adapter on the end. The grounds of the banana adapters should be connected. The positive side of the banana adapters should go into the breadboard’s banana connector slots, one into the breadboard’s ground (green female end banana connector on the breadboard) and one into the breadboard’s Vb (black female end banana connector on the breadboard). 
@@ -159,7 +162,13 @@ After the individual implmentation of PID feedback and mains electricity feedfor
 13. Now increase the gain once again to 1uA/V, again repeat step 11 if needed (best to get the signal as near as possible to centered about zero). You may also need to vary the DAC offset in the Qnimble applet for more fine tuning to get the LNA output centered about zero.
 14. Now increase the gain on the LNA to the final level of 200nA/V and again tune the DAC offset to get it as nearly centered about zero as possible. 
 15. Now it’s ready for testing the stabilization performance.
-16. Note that this is very finely tuned for whatever setup you have it set to, so if you move a magnet within the vicinity or move a current carrying wire within the vicinity, you likely will have to re-calibrate by adjusting the DAC output offset in the Qnimble applet again. 
+16. Note that this is very finely tuned for whatever setup you have it set to, so if you move a magnet within the vicinity or move a current carrying wire within the vicinity, you likely will have to re-calibrate by adjusting the DAC output offset in the Qnimble applet again.
+17. Here are some parameters have performed well previously:
+
+
+
+## Two Probe Stabilization Data
+
 
 # Future Work
 For our future work we hope to implement the stabilization setup developed above on a linear paul trap. We hope to first move optimize our circuits with voltage regulators to protect the operation amplifiers and coils from DC current spikes that could damage the circuitry and potentially the magnetometer. We would then like to implement feedforward for further 60Hz harmonics to attenuate up to 240Hz which would likely increase our PID bandwidth as well. Finally, we would then aim to implement our setup on a linear paul trap by designing new coils to it the ion trap geometry and then use the ion itself to quantify the magnetic field stability in addition to, or perhaps instead of, the magnetometer. 
