@@ -170,7 +170,9 @@ The optimal DAC (DAC offset) value will probably differ, see the above setup gui
 
 ## Two Probe Stabilization Data
 
-![AMFS2ProbePlot](AMFS2ProbePlot.png)
+<p align="center">
+  <img src="Figures/AMFS2ProbePlot.png" width="350" title="hover text">
+</p>
 
 # Future Work
 For our future work we hope to implement the stabilization setup developed above on a linear paul trap. We hope to first move optimize our circuits with voltage regulators to protect the operation amplifiers and coils from DC current spikes that could damage the circuitry and potentially the magnetometer. We would then like to implement feedforward for further 60Hz harmonics to attenuate up to 240Hz which would likely increase our PID bandwidth as well. Finally, we would then aim to implement our setup on a linear paul trap by designing new coils to it the ion trap geometry and then use the ion itself to quantify the magnetic field stability in addition to, or perhaps instead of, the magnetometer. 
