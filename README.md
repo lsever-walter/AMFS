@@ -171,7 +171,7 @@ The optimal DAC (DAC offset) value will probably differ, see the above setup gui
 ## Two Probe Stabilization Data
 
 <p align="center">
-  <img src="Figures/AMFS2ProbePlot.png" width="350" title="hover text">
+  <img src="Figures/AMFS2ProbePlot.png" width="800" title="hover text">
 </p>
 
 # Future Work
