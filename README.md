@@ -174,6 +174,8 @@ The optimal DAC (DAC offset) value will probably differ, see the above setup gui
   <img src="Figures/AMFS2ProbePlot.png" width="800" title="hover text">
 </p>
 
+Note that this plot did not use feedforward or a direct attenuation of the 60Hz noise, this plot only to showcase the ability to attenuate low frequency noise with the Qnimble Quarto as a controller, an SRS LNA to amplify the signal, and B field probes whose measurements are fed into a passive averager circuit to allow for two probe stabilization. This data was achieved using the PID parameters suggested in the setup guide. Many sets of parameters were tested, but this plot represents the most significant reduction in low frequency noise without significant overcorrection at higher frequencies. There is a small overcorrection hump that peaks at ~1kHz, but it is at roughly 1/1000 the noise levels of the low frequency noise that has been attenuated. 
+
 # Future Work
 For our future work we hope to implement the stabilization setup developed above on a linear paul trap. We hope to first move optimize our circuits with voltage regulators to protect the operation amplifiers and coils from DC current spikes that could damage the circuitry and potentially the magnetometer. We would then like to implement feedforward for further 60Hz harmonics to attenuate up to 240Hz which would likely increase our PID bandwidth as well. Finally, we would then aim to implement our setup on a linear paul trap by designing new coils to it the ion trap geometry and then use the ion itself to quantify the magnetic field stability in addition to, or perhaps instead of, the magnetometer. 
 
